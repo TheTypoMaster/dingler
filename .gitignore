@@ -1,0 +1,16 @@
+*.userprefs
+*.swp
+*.suo
+*.opensdf
+*.sdf
+.idea/
+CMakeLists.txt
+tools
+build
+pdf
+out
+v8
+x64
+testing
+third_party
+packages

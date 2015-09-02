@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml"/>
+    <AvailableItemName Include="net_interfaces_mojom_bindings_generator">
+      <Targets>_net_interfaces_mojom_bindings_generator</Targets>
+    </AvailableItemName>
+  </ItemGroup>
+  <UsingTask AssemblyName="Microsoft.Build.Tasks.v4.0" TaskFactory="XamlTaskFactory" TaskName="net_interfaces_mojom_bindings_generator">
+    <Task>$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml</Task>
+  </UsingTask>
+  <Target AfterTargets="$(net_interfaces_mojom_bindings_generatorAfterTargets)" BeforeTargets="$(net_interfaces_mojom_bindings_generatorBeforeTargets)" Condition="'@(net_interfaces_mojom_bindings_generator)' != ''" DependsOnTargets="$(net_interfaces_mojom_bindings_generatorDependsOn);Computenet_interfaces_mojom_bindings_generatorOutput" Inputs="%(net_interfaces_mojom_bindings_generator.Identity);%(net_interfaces_mojom_bindings_generator.AdditionalDependencies);$(MSBuildProjectFile)" Name="_net_interfaces_mojom_bindings_generator" Outputs="%(net_interfaces_mojom_bindings_generator.Outputs)">
+    <ItemGroup Condition="'@(SelectedFiles)' != ''">
+      <net_interfaces_mojom_bindings_generator Condition="'%(Identity)' != '@(SelectedFiles)'" Remove="@(net_interfaces_mojom_bindings_generator)"/>
+    </ItemGroup>
+    <ItemGroup>
+      <net_interfaces_mojom_bindings_generator_inputs Include="%(net_interfaces_mojom_bindings_generator.AdditionalDependencies)"/>
+    </ItemGroup>
+    <ItemGroup>
+      <net_interfaces_mojom_bindings_generator_tlog Condition="'%(net_interfaces_mojom_bindings_generator.Outputs)' != '' and '%(net_interfaces_mojom_bindings_generator.ExcludedFromBuild)' != 'true'" Include="%(net_interfaces_mojom_bindings_generator.Outputs)">
+        <Source>@(net_interfaces_mojom_bindings_generator, &apos;|&apos;)</Source>
+        <Inputs>@(net_interfaces_mojom_bindings_generator_inputs -&gt; &apos;%(Fullpath)&apos;, &apos;;&apos;)</Inputs>
+      </net_interfaces_mojom_bindings_generator_tlog>
+    </ItemGroup>
+    <Message Importance="High" Text="%(net_interfaces_mojom_bindings_generator.ExecutionDescription)"/>
+    <WriteLinesToFile Condition="'@(net_interfaces_mojom_bindings_generator_tlog)' != '' and '%(net_interfaces_mojom_bindings_generator_tlog.ExcludedFromBuild)' != 'true'" File="$(IntDir)$(ProjectName).write.1.tlog" Lines="^%(net_interfaces_mojom_bindings_generator_tlog.Source);@(net_interfaces_mojom_bindings_generator_tlog-&gt;'%(Fullpath)')"/>
+    <WriteLinesToFile Condition="'@(net_interfaces_mojom_bindings_generator_tlog)' != '' and '%(net_interfaces_mojom_bindings_generator_tlog.ExcludedFromBuild)' != 'true'" File="$(IntDir)$(ProjectName).read.1.tlog" Lines="^%(net_interfaces_mojom_bindings_generator_tlog.Source);%(net_interfaces_mojom_bindings_generator_tlog.Inputs)"/>
+    <net_interfaces_mojom_bindings_generator AdditionalOptions="%(net_interfaces_mojom_bindings_generator.AdditionalOptions)" CommandLineTemplate="%(net_interfaces_mojom_bindings_generator.CommandLineTemplate)" Condition="'@(net_interfaces_mojom_bindings_generator)' != '' and '%(net_interfaces_mojom_bindings_generator.ExcludedFromBuild)' != 'true'" EchoOff="true" Inputs="%(net_interfaces_mojom_bindings_generator.Identity)" StandardErrorImportance="High" StandardOutputImportance="High"/>
+  </Target>
+  <PropertyGroup>
+    <ComputeLinkInputsTargets>$(ComputeLinkInputsTargets);Computenet_interfaces_mojom_bindings_generatorOutput;</ComputeLinkInputsTargets>
+    <ComputeLibInputsTargets>$(ComputeLibInputsTargets);Computenet_interfaces_mojom_bindings_generatorOutput;</ComputeLibInputsTargets>
+  </PropertyGroup>
+  <Target Condition="'@(net_interfaces_mojom_bindings_generator)' != ''" Name="Computenet_interfaces_mojom_bindings_generatorOutput">
+    <ItemGroup>
+      <net_interfaces_mojom_bindings_generatorDirsToMake Condition="'@(net_interfaces_mojom_bindings_generator)' != '' and '%(net_interfaces_mojom_bindings_generator.ExcludedFromBuild)' != 'true'" Include="%(net_interfaces_mojom_bindings_generator.Outputs)"/>
+      <Link Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" Include="%(net_interfaces_mojom_bindings_generatorDirsToMake.Identity)"/>
+      <Lib Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" Include="%(net_interfaces_mojom_bindings_generatorDirsToMake.Identity)"/>
+      <ImpLib Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" Include="%(net_interfaces_mojom_bindings_generatorDirsToMake.Identity)"/>
+    </ItemGroup>
+    <MakeDir Directories="@(net_interfaces_mojom_bindings_generatorDirsToMake-&gt;'%(RootDir)%(Directory)')"/>
+  </Target>
+</Project>

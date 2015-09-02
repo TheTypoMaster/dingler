@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9B3E5035-B396-474E-ABA6-D9E1606953D5}</ProjectGuid>
+    <RootNamespace>kernel</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..;</AdditionalIncludeDirectories>
+      <UndefinePreprocessorDefinitions>
+      </UndefinePreprocessorDefinitions>
+      <PreprocessorDefinitions>_MBCS;NOMINMAX;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4267</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..;</AdditionalIncludeDirectories>
+      <UndefinePreprocessorDefinitions>
+      </UndefinePreprocessorDefinitions>
+      <PreprocessorDefinitions>_MBCS;NOMINMAX;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4267</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..;</AdditionalIncludeDirectories>
+      <UndefinePreprocessorDefinitions>
+      </UndefinePreprocessorDefinitions>
+      <PreprocessorDefinitions>_MBCS;NOMINMAX;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4267</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..;</AdditionalIncludeDirectories>
+      <UndefinePreprocessorDefinitions>
+      </UndefinePreprocessorDefinitions>
+      <PreprocessorDefinitions>_MBCS;NOMINMAX;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4267</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="application_host\application_process_host.cc" />
+    <ClCompile Include="child_process_launcher.cc" />
+    <ClCompile Include="child_process_security_policy_impl.cc" />
+    <ClCompile Include="command_host\command_process_host.cc" />
+    <ClCompile Include="container_host\container_application.cc" />
+    <ClCompile Include="container_host\container_catalog.cc" />
+    <ClCompile Include="container_host\container_command.cc" />
+    <ClCompile Include="container_host\container_host.cc" />
+    <ClCompile Include="container_host\container_manager.cc" />
+    <ClCompile Include="container_host\container_peer.cc" />
+    <ClCompile Include="container_host\container_process_host.cc" />
+    <ClCompile Include="container_host\container_service.cc" />
+    <ClCompile Include="container_host\running_pool.cc" />
+    <ClCompile Include="container_host\running_process.cc" />
+    <ClCompile Include="io_thread.cc" />
+    <ClCompile Include="kernel_child_process_host.cc" />
+    <ClCompile Include="kernel_child_process_host_iterator.cc" />
+    <ClCompile Include="kernel_child_process_observer.cc" />
+    <ClCompile Include="kernel_client.cc" />
+    <ClCompile Include="kernel_main.cc" />
+    <ClCompile Include="kernel_main_loop.cc" />
+    <ClCompile Include="kernel_main_runner.cc" />
+    <ClCompile Include="kernel_message_filter.cc" />
+    <ClCompile Include="kernel_process.cc" />
+    <ClCompile Include="kernel_process_finder_win.cc" />
+    <ClCompile Include="kernel_process_subthread.cc" />
+    <ClCompile Include="kernel_startup.cc" />
+    <ClCompile Include="kernel_thread.cc" />
+    <ClCompile Include="kernel_watcher\exit_funnel_win.cc" />
+    <ClCompile Include="notification_registrar.cc" />
+    <ClCompile Include="notification_service_impl.cc" />
+    <ClCompile Include="prefs\command_line_pref_store.cc" />
+    <ClCompile Include="prefs\kernel_prefs.cc" />
+    <ClCompile Include="prefs\pref_registry_syncable.cc" />
+    <ClCompile Include="prefs\proxy_config_dictionary.cc" />
+    <ClCompile Include="prefs\proxy_prefs.cc" />
+    <ClCompile Include="prefs\user_prefs.cc" />
+    <ClCompile Include="process_singleton_startup_lock.cc" />
+    <ClCompile Include="process_singleton_win.cc" />
+    <ClCompile Include="startup_task_runner.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="application_host\application_process_host.h" />
+    <ClInclude Include="child_process_data.h" />
+    <ClInclude Include="child_process_launcher.h" />
+    <ClInclude Include="child_process_security_policy.h" />
+    <ClInclude Include="child_process_security_policy_impl.h" />
+    <ClInclude Include="command_host\command_process_host.h" />
+    <ClInclude Include="container_host\container_application.h" />
+    <ClInclude Include="container_host\container_args.h" />
+    <ClInclude Include="container_host\container_catalog.h" />
+    <ClInclude Include="container_host\container_command.h" />
+    <ClInclude Include="container_host\container_host.h" />
+    <ClInclude Include="container_host\container_manager.h" />
+    <ClInclude Include="container_host\container_peer.h" />
+    <ClInclude Include="container_host\container_process_host.h" />
+    <ClInclude Include="container_host\container_service.h" />
+    <ClInclude Include="container_host\container_state.h" />
+    <ClInclude Include="container_host\running_pool.h" />
+    <ClInclude Include="container_host\runnable.h" />
+    <ClInclude Include="container_host\running_process.h" />
+    <ClInclude Include="io_thread.h" />
+    <ClInclude Include="kernel_child_process_host.h" />
+    <ClInclude Include="kernel_child_process_host_delegate.h" />
+    <ClInclude Include="kernel_child_process_host_iterator.h" />
+    <ClInclude Include="kernel_child_process_observer.h" />
+    <ClInclude Include="kernel_client.h" />
+    <ClInclude Include="kernel_main.h" />
+    <ClInclude Include="kernel_main_loop.h" />
+    <ClInclude Include="kernel_main_runner.h" />
+    <ClInclude Include="kernel_message_filter.h" />
+    <ClInclude Include="kernel_process.h" />
+    <ClInclude Include="kernel_process_finder_win.h" />
+    <ClInclude Include="kernel_process_subthread.h" />
+    <ClInclude Include="kernel_startup.h" />
+    <ClInclude Include="kernel_thread.h" />
+    <ClInclude Include="kernel_thread_delegate.h" />
+    <ClInclude Include="kernel_watcher\exit_funnel_win.h" />
+    <ClInclude Include="notification_details.h" />
+    <ClInclude Include="notification_observer.h" />
+    <ClInclude Include="notification_registrar.h" />
+    <ClInclude Include="notification_service.h" />
+    <ClInclude Include="notification_service_impl.h" />
+    <ClInclude Include="notification_source.h" />
+    <ClInclude Include="notification_types.h" />
+    <ClInclude Include="prefs\command_line_pref_store.h" />
+    <ClInclude Include="prefs\kernel_prefs.h" />
+    <ClInclude Include="prefs\pref_registry_syncable.h" />
+    <ClInclude Include="prefs\proxy_config_dictionary.h" />
+    <ClInclude Include="prefs\proxy_prefs.h" />
+    <ClInclude Include="prefs\user_prefs.h" />
+    <ClInclude Include="process_singleton.h" />
+    <ClInclude Include="process_singleton_startup_lock.h" />
+    <ClInclude Include="startup_task_runner.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

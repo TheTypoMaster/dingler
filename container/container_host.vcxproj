@@ -1,0 +1,328 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B18EAA50-388B-40A8-BFF6-5A34F4AFB321}</ProjectGuid>
+    <RootNamespace>host</RootNamespace>
+    <ProjectName>container_host</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..;../third_party/protobuf/src;../third_party/re2;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;NOMINMAX;_USE_MATH_DEFINES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4005;4267;4244;4800;4996;4003;4273;4716;4703;4309;4351;4715;4018;4503;4805</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..;../third_party/protobuf/src;../third_party/re2;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;NOMINMAX;_USE_MATH_DEFINES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4005;4267;4244;4800;4996;4003;4273;4716;4703;4309;4351;4715;4018;4503;4805</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..;../third_party/protobuf/src;../third_party/re2;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;NOMINMAX;_USE_MATH_DEFINES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4005;4267;4244;4800;4996;4003;4273;4716;4703;4309;4351;4715;4018;4503;4805</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..;../third_party/protobuf/src;../third_party/re2;</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;NOMINMAX;_USE_MATH_DEFINES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4005;4267;4244;4800;4996;4003;4273;4716;4703;4309;4351;4715;4018;4503;4805</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="host\container.cc" />
+    <ClCompile Include="host\container_main.cc" />
+    <ClCompile Include="host\container_process.cc" />
+    <ClCompile Include="host\container_thread.cc" />
+    <ClCompile Include="host\namespace\blob\blob.cc" />
+    <ClCompile Include="host\namespace\blob\blob_namespace.cc" />
+    <ClCompile Include="host\namespace\container\container_namespace.cc" />
+    <ClCompile Include="host\namespace\container\container_resource.cc" />
+    <ClCompile Include="host\namespace\container\container_pool_resource.cc" />
+    <ClCompile Include="host\namespace\container\volume_resource.cc" />
+    <ClCompile Include="host\namespace\credential\auth_token.cc" />
+    <ClCompile Include="host\namespace\credential\credential_namespace.cc" />
+    <ClCompile Include="host\namespace\credential\keystore.cc" />
+    <ClCompile Include="host\namespace\credential\userid.cc" />
+    <ClCompile Include="host\namespace\device\camera.cc" />
+    <ClCompile Include="host\namespace\device\device_namespace.cc" />
+    <ClCompile Include="host\namespace\index\index_namespace.cc" />
+    <ClCompile Include="host\namespace\io\runnable_socket.cc" />
+    <ClCompile Include="host\namespace\io\bt_socket.cc" />
+    <ClCompile Include="host\namespace\io\console.cc" />
+    <ClCompile Include="host\namespace\io\https_server_socket.cc" />
+    <ClCompile Include="host\namespace\io\https_socket.cc" />
+    <ClCompile Include="host\namespace\io\http_server_socket.cc" />
+    <ClCompile Include="host\namespace\io\http_socket.cc" />
+    <ClCompile Include="host\namespace\io\io_namespace.cc" />
+    <ClCompile Include="host\namespace\io\io_signal.cc" />
+    <ClCompile Include="host\namespace\io\ipc_server_socket.cc" />
+    <ClCompile Include="host\namespace\io\ipc_socket.cc" />
+    <ClCompile Include="host\namespace\io\dingler_peer.cc" />
+    <ClCompile Include="host\namespace\io\dingler_socket.cc" />
+    <ClCompile Include="host\namespace\io\rpc_server_socket.cc" />
+    <ClCompile Include="host\namespace\io\rpc_socket.cc" />
+    <ClCompile Include="host\namespace\io\server_socket.cc" />
+    <ClCompile Include="host\namespace\io\socket.cc" />
+    <ClCompile Include="host\namespace\io\stderr.cc" />
+    <ClCompile Include="host\namespace\io\stdin.cc" />
+    <ClCompile Include="host\namespace\io\stdout.cc" />
+    <ClCompile Include="host\namespace\io\tcp_server_socket.cc" />
+    <ClCompile Include="host\namespace\io\tcp_socket.cc" />
+    <ClCompile Include="host\namespace\io\tor_socket.cc" />
+    <ClCompile Include="host\namespace\io\udp_server_socket.cc" />
+    <ClCompile Include="host\namespace\io\udp_socket.cc" />
+    <ClCompile Include="host\namespace\kv\kv_namespace.cc" />
+    <ClCompile Include="host\namespace\kv\kv_node.cc" />
+    <ClCompile Include="host\namespace\namespace.cc" />
+    <ClCompile Include="host\namespace\namespace_index.cc" />
+    <ClCompile Include="host\namespace\namespace_index_db.cc" />
+    <ClCompile Include="host\namespace\namespace_view.cc" />
+    <ClCompile Include="host\namespace\plugin\plugin_namespace.cc" />
+    <ClCompile Include="host\namespace\process\process.cc" />
+    <ClCompile Include="host\namespace\process\process_namespace.cc" />
+    <ClCompile Include="host\namespace\process\resource_pool.cc" />
+    <ClCompile Include="host\namespace\resource.cc" />
+    <ClCompile Include="host\namespace\root\root_namespace.cc" />
+    <ClCompile Include="host\namespace\root\root_node.cc" />
+    <ClCompile Include="host\namespace\run\runnable.cc" />
+    <ClCompile Include="host\namespace\run\run_namespace.cc" />
+    <ClCompile Include="host\namespace\service\rpc\rpc_service.cc" />
+    <ClCompile Include="host\namespace\service\rpc\rpc_service_api.cc" />
+    <ClCompile Include="host\namespace\service\rpc\rpc_service_channel.cc" />
+    <ClCompile Include="host\namespace\service\service.cc" />
+    <ClCompile Include="host\namespace\service\service_api.cc" />
+    <ClCompile Include="host\namespace\service\service_channel.cc" />
+    <ClCompile Include="host\namespace\service\service_contract.cc" />
+    <ClCompile Include="host\namespace\service\service_namespace.cc" />
+    <ClCompile Include="host\namespace\service\service_network.cc" />
+    <ClCompile Include="host\namespace\service\service_peer.cc" />
+    <ClCompile Include="host\namespace\service\service_permission.cc" />
+    <ClCompile Include="host\namespace\social\social_contact.cc" />
+    <ClCompile Include="host\namespace\social\social_namespace.cc" />
+    <ClCompile Include="host\namespace\social\social_net.cc" />
+    <ClCompile Include="host\namespace\stats\stats_namespace.cc" />
+    <ClCompile Include="host\namespace\sys\sys_capabilities.cc" />
+    <ClCompile Include="host\namespace\sys\sys_cpu.cc" />
+    <ClCompile Include="host\namespace\sys\sys_host.cc" />
+    <ClCompile Include="host\namespace\sys\sys_memory.cc" />
+    <ClCompile Include="host\namespace\sys\sys_namespace.cc" />
+    <ClCompile Include="host\namespace\uuid\uuid_namespace.cc" />
+    <ClCompile Include="host\namespace\wallet\wallet.cc" />
+    <ClCompile Include="host\namespace\wallet\wallet_namespace.cc" />
+    <ClCompile Include="host\volume\volume.cc" />
+    <ClCompile Include="host\volume\volume_backend.cc" />
+    <ClCompile Include="host\volume\volume_dataset.cc" />
+    <ClCompile Include="host\volume\volume_drive.cc" />
+    <ClCompile Include="host\volume\volume_mount.cc" />
+    <ClCompile Include="host\volume\volume_mount_table.cc" />
+    <ClCompile Include="host\volume\volume_pool.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="host\container.h" />
+    <ClInclude Include="host\container_main.h" />
+    <ClInclude Include="host\container_process.h" />
+    <ClInclude Include="host\container_thread.h" />
+    <ClInclude Include="host\namespace\blob\blob.h" />
+    <ClInclude Include="host\namespace\blob\blob_namespace.h" />
+    <ClInclude Include="host\namespace\container\container_namespace.h" />
+    <ClInclude Include="host\namespace\container\container_resource.h" />
+    <ClInclude Include="host\namespace\container\container_pool_resource.h" />
+    <ClInclude Include="host\namespace\container\volume_resource.h" />
+    <ClInclude Include="host\namespace\credential\auth_token.h" />
+    <ClInclude Include="host\namespace\credential\credential_namespace.h" />
+    <ClInclude Include="host\namespace\credential\keystore.h" />
+    <ClInclude Include="host\namespace\credential\userid.h" />
+    <ClInclude Include="host\namespace\device\camera.h" />
+    <ClInclude Include="host\namespace\device\device_namespace.h" />
+    <ClInclude Include="host\namespace\index\index_namespace.h" />
+    <ClInclude Include="host\namespace\io\runnable_socket.h" />
+    <ClInclude Include="host\namespace\io\bt_socket.h" />
+    <ClInclude Include="host\namespace\io\console.h" />
+    <ClInclude Include="host\namespace\io\https_server_socket.h" />
+    <ClInclude Include="host\namespace\io\https_socket.h" />
+    <ClInclude Include="host\namespace\io\http_server_socket.h" />
+    <ClInclude Include="host\namespace\io\http_socket.h" />
+    <ClInclude Include="host\namespace\io\io_namespace.h" />
+    <ClInclude Include="host\namespace\io\io_signal.h" />
+    <ClInclude Include="host\namespace\io\ipc_server_socket.h" />
+    <ClInclude Include="host\namespace\io\ipc_socket.h" />
+    <ClInclude Include="host\namespace\io\dingler_peer.h" />
+    <ClInclude Include="host\namespace\io\dingler_socket.h" />
+    <ClInclude Include="host\namespace\io\rpc_server_socket.h" />
+    <ClInclude Include="host\namespace\io\rpc_socket.h" />
+    <ClInclude Include="host\namespace\io\server_socket.h" />
+    <ClInclude Include="host\namespace\io\socket.h" />
+    <ClInclude Include="host\namespace\io\stderr.h" />
+    <ClInclude Include="host\namespace\io\stdin.h" />
+    <ClInclude Include="host\namespace\io\stdout.h" />
+    <ClInclude Include="host\namespace\io\tcp_server_socket.h" />
+    <ClInclude Include="host\namespace\io\tcp_socket.h" />
+    <ClInclude Include="host\namespace\io\tor_socket.h" />
+    <ClInclude Include="host\namespace\io\udp_server_socket.h" />
+    <ClInclude Include="host\namespace\io\udp_socket.h" />
+    <ClInclude Include="host\namespace\kv\kv_namespace.h" />
+    <ClInclude Include="host\namespace\kv\kv_node.h" />
+    <ClInclude Include="host\namespace\namespace.h" />
+    <ClInclude Include="host\namespace\namespace_index.h" />
+    <ClInclude Include="host\namespace\namespace_index_db.h" />
+    <ClInclude Include="host\namespace\namespace_inode.h" />
+    <ClInclude Include="host\namespace\namespace_view.h" />
+    <ClInclude Include="host\namespace\plugin\plugin_namespace.h" />
+    <ClInclude Include="host\namespace\process\process.h" />
+    <ClInclude Include="host\namespace\process\process_namespace.h" />
+    <ClInclude Include="host\namespace\process\resource_pool.h" />
+    <ClInclude Include="host\namespace\resource.h" />
+    <ClInclude Include="host\namespace\root\root_namespace.h" />
+    <ClInclude Include="host\namespace\root\root_node.h" />
+    <ClInclude Include="host\namespace\run\runnable.h" />
+    <ClInclude Include="host\namespace\run\run_namespace.h" />
+    <ClInclude Include="host\namespace\service\rpc\rpc_service.h" />
+    <ClInclude Include="host\namespace\service\rpc\rpc_service_api.h" />
+    <ClInclude Include="host\namespace\service\rpc\rpc_service_channel.h" />
+    <ClInclude Include="host\namespace\service\service.h" />
+    <ClInclude Include="host\namespace\service\service_api.h" />
+    <ClInclude Include="host\namespace\service\service_channel.h" />
+    <ClInclude Include="host\namespace\service\service_contract.h" />
+    <ClInclude Include="host\namespace\service\service_namespace.h" />
+    <ClInclude Include="host\namespace\service\service_network.h" />
+    <ClInclude Include="host\namespace\service\service_peer.h" />
+    <ClInclude Include="host\namespace\service\service_permission.h" />
+    <ClInclude Include="host\namespace\social\social_contact.h" />
+    <ClInclude Include="host\namespace\social\social_namespace.h" />
+    <ClInclude Include="host\namespace\social\social_net.h" />
+    <ClInclude Include="host\namespace\stats\stats_namespace.h" />
+    <ClInclude Include="host\namespace\sys\sys_capabilities.h" />
+    <ClInclude Include="host\namespace\sys\sys_cpu.h" />
+    <ClInclude Include="host\namespace\sys\sys_host.h" />
+    <ClInclude Include="host\namespace\sys\sys_memory.h" />
+    <ClInclude Include="host\namespace\sys\sys_namespace.h" />
+    <ClInclude Include="host\namespace\uuid\uuid_namespace.h" />
+    <ClInclude Include="host\namespace\wallet\wallet.h" />
+    <ClInclude Include="host\namespace\wallet\wallet_namespace.h" />
+    <ClInclude Include="host\volume\volume.h" />
+    <ClInclude Include="host\volume\volume_backend.h" />
+    <ClInclude Include="host\volume\volume_dataset.h" />
+    <ClInclude Include="host\volume\volume_drive.h" />
+    <ClInclude Include="host\volume\volume_mount.h" />
+    <ClInclude Include="host\volume\volume_mount_table.h" />
+    <ClInclude Include="host\volume\volume_pool.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

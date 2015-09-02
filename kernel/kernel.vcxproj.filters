@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="io_thread.cc" />
+    <ClCompile Include="kernel_main.cc" />
+    <ClCompile Include="kernel_main_loop.cc" />
+    <ClCompile Include="kernel_main_runner.cc" />
+    <ClCompile Include="kernel_process.cc" />
+    <ClCompile Include="kernel_thread.cc" />
+    <ClCompile Include="container_host\container_process_host.cc">
+      <Filter>container_host</Filter>
+    </ClCompile>
+    <ClCompile Include="kernel_process_subthread.cc" />
+    <ClCompile Include="kernel_client.cc" />
+    <ClCompile Include="application_host\application_process_host.cc">
+      <Filter>application_host</Filter>
+    </ClCompile>
+    <ClCompile Include="notification_registrar.cc" />
+    <ClCompile Include="notification_service_impl.cc" />
+    <ClCompile Include="process_singleton_startup_lock.cc" />
+    <ClCompile Include="process_singleton_win.cc" />
+    <ClCompile Include="kernel_process_finder_win.cc" />
+    <ClCompile Include="kernel_startup.cc" />
+    <ClCompile Include="startup_task_runner.cc" />
+    <ClCompile Include="kernel_watcher\exit_funnel_win.cc">
+      <Filter>kernel_watcher</Filter>
+    </ClCompile>
+    <ClCompile Include="kernel_child_process_host.cc" />
+    <ClCompile Include="kernel_child_process_host_iterator.cc" />
+    <ClCompile Include="kernel_child_process_observer.cc" />
+    <ClCompile Include="child_process_launcher.cc" />
+    <ClCompile Include="child_process_security_policy_impl.cc" />
+    <ClCompile Include="container_host\container_application.cc">
+      <Filter>container_host</Filter>
+    </ClCompile>
+    <ClCompile Include="container_host\container_catalog.cc">
+      <Filter>container_host</Filter>
+    </ClCompile>
+    <ClCompile Include="container_host\container_command.cc">
+      <Filter>container_host</Filter>
+    </ClCompile>
+    <ClCompile Include="container_host\container_host.cc">
+      <Filter>container_host</Filter>
+    </ClCompile>
+    <ClCompile Include="container_host\container_manager.cc">
+      <Filter>container_host</Filter>
+    </ClCompile>
+    <ClCompile Include="container_host\container_peer.cc">
+      <Filter>container_host</Filter>
+    </ClCompile>
+    <ClCompile Include="container_host\container_service.cc">
+      <Filter>container_host</Filter>
+    </ClCompile>
+    <ClCompile Include="container_host\running_process.cc">
+      <Filter>container_host</Filter>
+    </ClCompile>
+    <ClCompile Include="container_host\running_pool.cc">
+      <Filter>container_host</Filter>
+    </ClCompile>
+    <ClCompile Include="kernel_message_filter.cc" />
+    <ClCompile Include="prefs\user_prefs.cc">
+      <Filter>prefs</Filter>
+    </ClCompile>
+    <ClCompile Include="prefs\kernel_prefs.cc">
+      <Filter>prefs</Filter>
+    </ClCompile>
+    <ClCompile Include="prefs\pref_registry_syncable.cc">
+      <Filter>prefs</Filter>
+    </ClCompile>
+    <ClCompile Include="prefs\command_line_pref_store.cc">
+      <Filter>prefs</Filter>
+    </ClCompile>
+    <ClCompile Include="prefs\proxy_config_dictionary.cc">
+      <Filter>prefs</Filter>
+    </ClCompile>
+    <ClCompile Include="prefs\proxy_prefs.cc">
+      <Filter>prefs</Filter>
+    </ClCompile>
+    <ClCompile Include="command_host\command_process_host.cc">
+      <Filter>command_host</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="io_thread.h" />
+    <ClInclude Include="kernel_main.h" />
+    <ClInclude Include="kernel_main_loop.h" />
+    <ClInclude Include="kernel_main_runner.h" />
+    <ClInclude Include="kernel_process.h" />
+    <ClInclude Include="kernel_thread.h" />
+    <ClInclude Include="container_host\container_process_host.h">
+      <Filter>container_host</Filter>
+    </ClInclude>
+    <ClInclude Include="kernel_process_subthread.h" />
+    <ClInclude Include="kernel_thread_delegate.h" />
+    <ClInclude Include="kernel_client.h" />
+    <ClInclude Include="application_host\application_process_host.h">
+      <Filter>application_host</Filter>
+    </ClInclude>
+    <ClInclude Include="notification_details.h" />
+    <ClInclude Include="notification_observer.h" />
+    <ClInclude Include="notification_registrar.h" />
+    <ClInclude Include="notification_service.h" />
+    <ClInclude Include="notification_service_impl.h" />
+    <ClInclude Include="notification_source.h" />
+    <ClInclude Include="notification_types.h" />
+    <ClInclude Include="process_singleton.h" />
+    <ClInclude Include="process_singleton_startup_lock.h" />
+    <ClInclude Include="kernel_process_finder_win.h" />
+    <ClInclude Include="kernel_startup.h" />
+    <ClInclude Include="startup_task_runner.h" />
+    <ClInclude Include="kernel_watcher\exit_funnel_win.h">
+      <Filter>kernel_watcher</Filter>
+    </ClInclude>
+    <ClInclude Include="kernel_child_process_host.h" />
+    <ClInclude Include="kernel_child_process_host_delegate.h" />
+    <ClInclude Include="kernel_child_process_host_iterator.h" />
+    <ClInclude Include="kernel_child_process_observer.h" />
+    <ClInclude Include="child_process_data.h" />
+    <ClInclude Include="child_process_launcher.h" />
+    <ClInclude Include="child_process_security_policy.h" />
+    <ClInclude Include="child_process_security_policy_impl.h" />
+    <ClInclude Include="container_host\container_application.h">
+      <Filter>container_host</Filter>
+    </ClInclude>
+    <ClInclude Include="container_host\container_args.h">
+      <Filter>container_host</Filter>
+    </ClInclude>
+    <ClInclude Include="container_host\container_catalog.h">
+      <Filter>container_host</Filter>
+    </ClInclude>
+    <ClInclude Include="container_host\container_command.h">
+      <Filter>container_host</Filter>
+    </ClInclude>
+    <ClInclude Include="container_host\container_host.h">
+      <Filter>container_host</Filter>
+    </ClInclude>
+    <ClInclude Include="container_host\container_manager.h">
+      <Filter>container_host</Filter>
+    </ClInclude>
+    <ClInclude Include="container_host\container_peer.h">
+      <Filter>container_host</Filter>
+    </ClInclude>
+    <ClInclude Include="container_host\container_service.h">
+      <Filter>container_host</Filter>
+    </ClInclude>
+    <ClInclude Include="container_host\container_state.h">
+      <Filter>container_host</Filter>
+    </ClInclude>
+    <ClInclude Include="container_host\runnable.h">
+      <Filter>container_host</Filter>
+    </ClInclude>
+    <ClInclude Include="container_host\running_process.h">
+      <Filter>container_host</Filter>
+    </ClInclude>
+    <ClInclude Include="container_host\running_pool.h">
+      <Filter>container_host</Filter>
+    </ClInclude>
+    <ClInclude Include="kernel_message_filter.h" />
+    <ClInclude Include="prefs\user_prefs.h">
+      <Filter>prefs</Filter>
+    </ClInclude>
+    <ClInclude Include="prefs\kernel_prefs.h">
+      <Filter>prefs</Filter>
+    </ClInclude>
+    <ClInclude Include="prefs\pref_registry_syncable.h">
+      <Filter>prefs</Filter>
+    </ClInclude>
+    <ClInclude Include="prefs\command_line_pref_store.h">
+      <Filter>prefs</Filter>
+    </ClInclude>
+    <ClInclude Include="prefs\proxy_config_dictionary.h">
+      <Filter>prefs</Filter>
+    </ClInclude>
+    <ClInclude Include="prefs\proxy_prefs.h">
+      <Filter>prefs</Filter>
+    </ClInclude>
+    <ClInclude Include="command_host\command_process_host.h">
+      <Filter>command_host</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="container_host">
+      <UniqueIdentifier>{f3dab109-cb2f-4fa4-9a63-f18f38eaacc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="net">
+      <UniqueIdentifier>{193b6e2e-ad2b-41ad-83b4-be41bd01976f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="application_host">
+      <UniqueIdentifier>{3d11ee76-b163-46ae-8039-88b9d6431c66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="kernel_watcher">
+      <UniqueIdentifier>{11320de3-cdbe-4192-8c00-5db63ee3a9a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="prefs">
+      <UniqueIdentifier>{ad1b30b3-948f-49ab-bf7c-dd85919c00a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="command_host">
+      <UniqueIdentifier>{718cc33c-72bc-4027-8ca3-9bb166743dbb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

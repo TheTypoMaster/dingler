@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="proto">
+      <UniqueIdentifier>{47fc779c-68d3-4e1a-88d6-1ba30e69aaf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="net">
+      <UniqueIdentifier>{f73ba925-28b6-40f8-ae07-108fd1626048}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="conf">
+      <UniqueIdentifier>{a31cfc94-ffa8-4d5d-a4e4-ecf0340419c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="encoding">
+      <UniqueIdentifier>{7d217739-bec8-4b36-8378-a36ef14d19c7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="driver\proto\header.h">
+      <Filter>proto</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\net\request.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\net\connection.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\net\response.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\net\stream.h">
+      <Filter>net</Filter>
+    </ClInclude>
+    <ClInclude Include="driver\net\channel.h">
+      <Filter>net</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="driver\net\request.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\net\response.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\net\connection.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\net\stream.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+    <ClCompile Include="driver\net\channel.cc">
+      <Filter>net</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

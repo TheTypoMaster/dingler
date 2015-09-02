@@ -1,0 +1,1971 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{61397C1C-A17B-31A3-C664-FDF082F428E2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>net_resources</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>Utility</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\.\bin\;$(MSBuildProjectDirectory)\.\bin\</ExecutablePath>
+    <OutDir>..\build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(OutDir)obj\global_intermediate;..\third_party\wtl\include;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP /we4389 /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4091;4127;4351;4355;4503;4589;4611;4100;4121;4244;4481;4505;4510;4512;4610;4838;4996;4456;4457;4458;4459;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <ForcedIncludeFiles>precompile.h</ForcedIncludeFiles>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompile.h</PrecompiledHeaderFile>
+      <PreprocessorDefinitions>_DEBUG;V8_DEPRECATION_WARNINGS;_WIN32_WINNT=0x0603;WINVER=0x0603;WIN32;_WINDOWS;NOMINMAX;PSAPI_VERSION=1;_CRT_RAND_S;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;WIN32_LEAN_AND_MEAN;_ATL_NO_OPENGL;_SECURE_ATL;_HAS_EXCEPTIONS=0;_WINSOCK_DEPRECATED_NO_WARNINGS;CHROMIUM_BUILD;CR_CLANG_REVISION=242415-1;USE_AURA=1;USE_ASH=1;USE_DEFAULT_RENDER_THEME=1;USE_LIBJPEG_TURBO=1;ENABLE_ONE_CLICK_SIGNIN;ENABLE_PRE_SYNC_BACKUP;ENABLE_REMOTING=1;ENABLE_WEBRTC=1;ENABLE_MEDIA_ROUTER=1;ENABLE_PEPPER_CDMS;ENABLE_CONFIGURATION_POLICY;ENABLE_NOTIFICATIONS;ENABLE_HIDPI=1;ENABLE_TOPCHROME_MD=1;DONT_EMBED_BUILD_METADATA;NO_TCMALLOC;ALLOCATOR_SHIM;__STD_C;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;NTDDI_VERSION=0x06030000;_USING_V110_SDK71_;ENABLE_TASK_MANAGER=1;ENABLE_EXTENSIONS=1;ENABLE_PLUGIN_INSTALLATION=1;ENABLE_PLUGINS=1;ENABLE_SESSION_SERVICE=1;ENABLE_THEMES=1;ENABLE_AUTOFILL_DIALOG=1;ENABLE_BACKGROUND=1;ENABLE_GOOGLE_NOW=1;CLD_VERSION=2;ENABLE_PRINTING=1;ENABLE_BASIC_PRINTING=1;ENABLE_PRINT_PREVIEW=1;ENABLE_SPELLCHECK=1;ENABLE_CAPTIVE_PORTAL_DETECTION=1;ENABLE_APP_LIST=1;ENABLE_SETTINGS_APP=1;ENABLE_SUPERVISED_USERS=1;ENABLE_MDNS=1;ENABLE_SERVICE_DISCOVERY=1;ENABLE_WIFI_BOOTSTRAPPING=1;V8_USE_EXTERNAL_STARTUP_DATA;FULL_SAFE_BROWSING;SAFE_BROWSING_CSD;SAFE_BROWSING_DB_LOCAL;SAFE_BROWSING_SERVICE;USE_LIBPCI=1;USE_OPENSSL=1;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;DYNAMIC_ANNOTATIONS_ENABLED=1;WTF_USE_DYNAMIC_ANNOTATIONS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/Windows Kits/8.1/Lib/win8/um/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>wininet.lib;dnsapi.lib;version.lib;msimg32.lib;ws2_32.lib;usp10.lib;psapi.lib;dbghelp.lib;winmm.lib;shlwapi.lib;kernel32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;user32.lib;uuid.lib;odbc32.lib;odbccp32.lib;delayimp.lib;credui.lib;netapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/Windows Kits/8.1/Lib/win8/um/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/maxilksize:0x7ff00000 /safeseh /dynamicbase /ignore:4199 /ignore:4221 /nxcompat /largeaddressaware %(AdditionalOptions)</AdditionalOptions>
+      <DelayLoadDLLs>dbghelp.dll;dwmapi.dll;shell32.dll;uxtheme.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <FixedBaseAddress>false</FixedBaseAddress>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>$(OutDir)lib\$(TargetName).lib</ImportLibrary>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DllDataFileName>%(Filename).dlldata.c</DllDataFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..;$(OutDir)obj/global_intermediate;$(OutDir)obj\global_intermediate;..\third_party\wtl\include;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;V8_DEPRECATION_WARNINGS;_WIN32_WINNT=0x0603;WINVER=0x0603;WIN32;_WINDOWS;NOMINMAX;PSAPI_VERSION=1;_CRT_RAND_S;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;WIN32_LEAN_AND_MEAN;_ATL_NO_OPENGL;_SECURE_ATL;_HAS_EXCEPTIONS=0;_WINSOCK_DEPRECATED_NO_WARNINGS;CHROMIUM_BUILD;CR_CLANG_REVISION=242415-1;USE_AURA=1;USE_ASH=1;USE_DEFAULT_RENDER_THEME=1;USE_LIBJPEG_TURBO=1;ENABLE_ONE_CLICK_SIGNIN;ENABLE_PRE_SYNC_BACKUP;ENABLE_REMOTING=1;ENABLE_WEBRTC=1;ENABLE_MEDIA_ROUTER=1;ENABLE_PEPPER_CDMS;ENABLE_CONFIGURATION_POLICY;ENABLE_NOTIFICATIONS;ENABLE_HIDPI=1;ENABLE_TOPCHROME_MD=1;DONT_EMBED_BUILD_METADATA;NO_TCMALLOC;ALLOCATOR_SHIM;__STD_C;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;NTDDI_VERSION=0x06030000;_USING_V110_SDK71_;ENABLE_TASK_MANAGER=1;ENABLE_EXTENSIONS=1;ENABLE_PLUGIN_INSTALLATION=1;ENABLE_PLUGINS=1;ENABLE_SESSION_SERVICE=1;ENABLE_THEMES=1;ENABLE_AUTOFILL_DIALOG=1;ENABLE_BACKGROUND=1;ENABLE_GOOGLE_NOW=1;CLD_VERSION=2;ENABLE_PRINTING=1;ENABLE_BASIC_PRINTING=1;ENABLE_PRINT_PREVIEW=1;ENABLE_SPELLCHECK=1;ENABLE_CAPTIVE_PORTAL_DETECTION=1;ENABLE_APP_LIST=1;ENABLE_SETTINGS_APP=1;ENABLE_SUPERVISED_USERS=1;ENABLE_MDNS=1;ENABLE_SERVICE_DISCOVERY=1;ENABLE_WIFI_BOOTSTRAPPING=1;V8_USE_EXTERNAL_STARTUP_DATA;FULL_SAFE_BROWSING;SAFE_BROWSING_CSD;SAFE_BROWSING_DB_LOCAL;SAFE_BROWSING_SERVICE;USE_LIBPCI=1;USE_OPENSSL=1;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;DYNAMIC_ANNOTATIONS_ENABLED=1;WTF_USE_DYNAMIC_ANNOTATIONS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(OutDir)obj\global_intermediate;..\third_party\wtl\include;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP /we4389 /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4091;4127;4351;4355;4503;4589;4611;4100;4121;4244;4481;4505;4510;4512;4610;4838;4996;4456;4457;4458;4459;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <ForcedIncludeFiles>precompile.h</ForcedIncludeFiles>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <MinimalRebuild>false</MinimalRebuild>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompile.h</PrecompiledHeaderFile>
+      <PreprocessorDefinitions>_DEBUG;V8_DEPRECATION_WARNINGS;_WIN32_WINNT=0x0603;WINVER=0x0603;WIN32;_WINDOWS;NOMINMAX;PSAPI_VERSION=1;_CRT_RAND_S;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;WIN32_LEAN_AND_MEAN;_ATL_NO_OPENGL;_SECURE_ATL;_HAS_EXCEPTIONS=0;_WINSOCK_DEPRECATED_NO_WARNINGS;CHROMIUM_BUILD;CR_CLANG_REVISION=242415-1;USE_AURA=1;USE_ASH=1;USE_DEFAULT_RENDER_THEME=1;USE_LIBJPEG_TURBO=1;ENABLE_ONE_CLICK_SIGNIN;ENABLE_PRE_SYNC_BACKUP;ENABLE_REMOTING=1;ENABLE_WEBRTC=1;ENABLE_MEDIA_ROUTER=1;ENABLE_PEPPER_CDMS;ENABLE_CONFIGURATION_POLICY;ENABLE_NOTIFICATIONS;ENABLE_HIDPI=1;ENABLE_TOPCHROME_MD=1;DONT_EMBED_BUILD_METADATA;NO_TCMALLOC;ALLOCATOR_SHIM;__STD_C;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;NTDDI_VERSION=0x06030000;_USING_V110_SDK71_;ENABLE_TASK_MANAGER=1;ENABLE_EXTENSIONS=1;ENABLE_PLUGIN_INSTALLATION=1;ENABLE_PLUGINS=1;ENABLE_SESSION_SERVICE=1;ENABLE_THEMES=1;ENABLE_AUTOFILL_DIALOG=1;ENABLE_BACKGROUND=1;ENABLE_GOOGLE_NOW=1;CLD_VERSION=2;ENABLE_PRINTING=1;ENABLE_BASIC_PRINTING=1;ENABLE_PRINT_PREVIEW=1;ENABLE_SPELLCHECK=1;ENABLE_CAPTIVE_PORTAL_DETECTION=1;ENABLE_APP_LIST=1;ENABLE_SETTINGS_APP=1;ENABLE_SUPERVISED_USERS=1;ENABLE_MDNS=1;ENABLE_SERVICE_DISCOVERY=1;ENABLE_WIFI_BOOTSTRAPPING=1;V8_USE_EXTERNAL_STARTUP_DATA;FULL_SAFE_BROWSING;SAFE_BROWSING_CSD;SAFE_BROWSING_DB_LOCAL;SAFE_BROWSING_SERVICE;USE_LIBPCI=1;USE_OPENSSL=1;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;DYNAMIC_ANNOTATIONS_ENABLED=1;WTF_USE_DYNAMIC_ANNOTATIONS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/Windows Kits/8.1/Lib/win8/um/x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>wininet.lib;dnsapi.lib;version.lib;msimg32.lib;ws2_32.lib;usp10.lib;psapi.lib;dbghelp.lib;winmm.lib;shlwapi.lib;kernel32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;user32.lib;uuid.lib;odbc32.lib;odbccp32.lib;delayimp.lib;credui.lib;netapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/Windows Kits/8.1/Lib/win8/um/x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/maxilksize:0x7ff00000 /dynamicbase /ignore:4199 /ignore:4221 /nxcompat %(AdditionalOptions)</AdditionalOptions>
+      <DelayLoadDLLs>dbghelp.dll;dwmapi.dll;shell32.dll;uxtheme.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <FixedBaseAddress>false</FixedBaseAddress>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>olepro32.lib</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)lib\$(TargetName).lib</ImportLibrary>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MinimumRequiredVersion>5.02</MinimumRequiredVersion>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DllDataFileName>%(Filename).dlldata.c</DllDataFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..;$(OutDir)obj/global_intermediate;$(OutDir)obj\global_intermediate;..\third_party\wtl\include;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;V8_DEPRECATION_WARNINGS;_WIN32_WINNT=0x0603;WINVER=0x0603;WIN32;_WINDOWS;NOMINMAX;PSAPI_VERSION=1;_CRT_RAND_S;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;WIN32_LEAN_AND_MEAN;_ATL_NO_OPENGL;_SECURE_ATL;_HAS_EXCEPTIONS=0;_WINSOCK_DEPRECATED_NO_WARNINGS;CHROMIUM_BUILD;CR_CLANG_REVISION=242415-1;USE_AURA=1;USE_ASH=1;USE_DEFAULT_RENDER_THEME=1;USE_LIBJPEG_TURBO=1;ENABLE_ONE_CLICK_SIGNIN;ENABLE_PRE_SYNC_BACKUP;ENABLE_REMOTING=1;ENABLE_WEBRTC=1;ENABLE_MEDIA_ROUTER=1;ENABLE_PEPPER_CDMS;ENABLE_CONFIGURATION_POLICY;ENABLE_NOTIFICATIONS;ENABLE_HIDPI=1;ENABLE_TOPCHROME_MD=1;DONT_EMBED_BUILD_METADATA;NO_TCMALLOC;ALLOCATOR_SHIM;__STD_C;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;NTDDI_VERSION=0x06030000;_USING_V110_SDK71_;ENABLE_TASK_MANAGER=1;ENABLE_EXTENSIONS=1;ENABLE_PLUGIN_INSTALLATION=1;ENABLE_PLUGINS=1;ENABLE_SESSION_SERVICE=1;ENABLE_THEMES=1;ENABLE_AUTOFILL_DIALOG=1;ENABLE_BACKGROUND=1;ENABLE_GOOGLE_NOW=1;CLD_VERSION=2;ENABLE_PRINTING=1;ENABLE_BASIC_PRINTING=1;ENABLE_PRINT_PREVIEW=1;ENABLE_SPELLCHECK=1;ENABLE_CAPTIVE_PORTAL_DETECTION=1;ENABLE_APP_LIST=1;ENABLE_SETTINGS_APP=1;ENABLE_SUPERVISED_USERS=1;ENABLE_MDNS=1;ENABLE_SERVICE_DISCOVERY=1;ENABLE_WIFI_BOOTSTRAPPING=1;V8_USE_EXTERNAL_STARTUP_DATA;FULL_SAFE_BROWSING;SAFE_BROWSING_CSD;SAFE_BROWSING_DB_LOCAL;SAFE_BROWSING_SERVICE;USE_LIBPCI=1;USE_OPENSSL=1;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;DYNAMIC_ANNOTATIONS_ENABLED=1;WTF_USE_DYNAMIC_ANNOTATIONS=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(OutDir)obj\global_intermediate;..\third_party\wtl\include;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP /we4389 /bigobj /d2Zi+ /Zc:inline /Oy- /Gw %(AdditionalOptions)</AdditionalOptions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4091;4127;4351;4355;4503;4589;4611;4100;4121;4244;4481;4505;4510;4512;4610;4838;4996;4456;4457;4458;4459;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <ForcedIncludeFiles>precompile.h</ForcedIncludeFiles>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MinimalRebuild>false</MinimalRebuild>
+      <OmitFramePointers>false</OmitFramePointers>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompile.h</PrecompiledHeaderFile>
+      <PreprocessorDefinitions>V8_DEPRECATION_WARNINGS;_WIN32_WINNT=0x0603;WINVER=0x0603;WIN32;_WINDOWS;NOMINMAX;PSAPI_VERSION=1;_CRT_RAND_S;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;WIN32_LEAN_AND_MEAN;_ATL_NO_OPENGL;_SECURE_ATL;_HAS_EXCEPTIONS=0;_WINSOCK_DEPRECATED_NO_WARNINGS;CHROMIUM_BUILD;CR_CLANG_REVISION=242415-1;USE_AURA=1;USE_ASH=1;USE_DEFAULT_RENDER_THEME=1;USE_LIBJPEG_TURBO=1;ENABLE_ONE_CLICK_SIGNIN;ENABLE_PRE_SYNC_BACKUP;ENABLE_REMOTING=1;ENABLE_WEBRTC=1;ENABLE_MEDIA_ROUTER=1;ENABLE_PEPPER_CDMS;ENABLE_CONFIGURATION_POLICY;ENABLE_NOTIFICATIONS;ENABLE_HIDPI=1;ENABLE_TOPCHROME_MD=1;DONT_EMBED_BUILD_METADATA;NO_TCMALLOC;ALLOCATOR_SHIM;__STD_C;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;NTDDI_VERSION=0x06030000;_USING_V110_SDK71_;ENABLE_TASK_MANAGER=1;ENABLE_EXTENSIONS=1;ENABLE_PLUGIN_INSTALLATION=1;ENABLE_PLUGINS=1;ENABLE_SESSION_SERVICE=1;ENABLE_THEMES=1;ENABLE_AUTOFILL_DIALOG=1;ENABLE_BACKGROUND=1;ENABLE_GOOGLE_NOW=1;CLD_VERSION=2;ENABLE_PRINTING=1;ENABLE_BASIC_PRINTING=1;ENABLE_PRINT_PREVIEW=1;ENABLE_SPELLCHECK=1;ENABLE_CAPTIVE_PORTAL_DETECTION=1;ENABLE_APP_LIST=1;ENABLE_SETTINGS_APP=1;ENABLE_SUPERVISED_USERS=1;ENABLE_MDNS=1;ENABLE_SERVICE_DISCOVERY=1;ENABLE_WIFI_BOOTSTRAPPING=1;V8_USE_EXTERNAL_STARTUP_DATA;FULL_SAFE_BROWSING;SAFE_BROWSING_CSD;SAFE_BROWSING_DB_LOCAL;SAFE_BROWSING_SERVICE;USE_LIBPCI=1;USE_OPENSSL=1;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/Windows Kits/8.1/Lib/win8/um/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>wininet.lib;dnsapi.lib;version.lib;msimg32.lib;ws2_32.lib;usp10.lib;psapi.lib;dbghelp.lib;winmm.lib;shlwapi.lib;kernel32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;user32.lib;uuid.lib;odbc32.lib;odbccp32.lib;delayimp.lib;credui.lib;netapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/Windows Kits/8.1/Lib/win8/um/x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/maxilksize:0x7ff00000 /safeseh /dynamicbase /ignore:4199 /ignore:4221 /nxcompat /largeaddressaware %(AdditionalOptions)</AdditionalOptions>
+      <DelayLoadDLLs>dbghelp.dll;dwmapi.dll;shell32.dll;uxtheme.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <FixedBaseAddress>false</FixedBaseAddress>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ImportLibrary>$(OutDir)lib\$(TargetName).lib</ImportLibrary>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MinimumRequiredVersion>5.01</MinimumRequiredVersion>
+      <OptimizeReferences>true</OptimizeReferences>
+      <Profile>true</Profile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DllDataFileName>%(Filename).dlldata.c</DllDataFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..;$(OutDir)obj/global_intermediate;$(OutDir)obj\global_intermediate;..\third_party\wtl\include;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>V8_DEPRECATION_WARNINGS;_WIN32_WINNT=0x0603;WINVER=0x0603;WIN32;_WINDOWS;NOMINMAX;PSAPI_VERSION=1;_CRT_RAND_S;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;WIN32_LEAN_AND_MEAN;_ATL_NO_OPENGL;_SECURE_ATL;_HAS_EXCEPTIONS=0;_WINSOCK_DEPRECATED_NO_WARNINGS;CHROMIUM_BUILD;CR_CLANG_REVISION=242415-1;USE_AURA=1;USE_ASH=1;USE_DEFAULT_RENDER_THEME=1;USE_LIBJPEG_TURBO=1;ENABLE_ONE_CLICK_SIGNIN;ENABLE_PRE_SYNC_BACKUP;ENABLE_REMOTING=1;ENABLE_WEBRTC=1;ENABLE_MEDIA_ROUTER=1;ENABLE_PEPPER_CDMS;ENABLE_CONFIGURATION_POLICY;ENABLE_NOTIFICATIONS;ENABLE_HIDPI=1;ENABLE_TOPCHROME_MD=1;DONT_EMBED_BUILD_METADATA;NO_TCMALLOC;ALLOCATOR_SHIM;__STD_C;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;NTDDI_VERSION=0x06030000;_USING_V110_SDK71_;ENABLE_TASK_MANAGER=1;ENABLE_EXTENSIONS=1;ENABLE_PLUGIN_INSTALLATION=1;ENABLE_PLUGINS=1;ENABLE_SESSION_SERVICE=1;ENABLE_THEMES=1;ENABLE_AUTOFILL_DIALOG=1;ENABLE_BACKGROUND=1;ENABLE_GOOGLE_NOW=1;CLD_VERSION=2;ENABLE_PRINTING=1;ENABLE_BASIC_PRINTING=1;ENABLE_PRINT_PREVIEW=1;ENABLE_SPELLCHECK=1;ENABLE_CAPTIVE_PORTAL_DETECTION=1;ENABLE_APP_LIST=1;ENABLE_SETTINGS_APP=1;ENABLE_SUPERVISED_USERS=1;ENABLE_MDNS=1;ENABLE_SERVICE_DISCOVERY=1;ENABLE_WIFI_BOOTSTRAPPING=1;V8_USE_EXTERNAL_STARTUP_DATA;FULL_SAFE_BROWSING;SAFE_BROWSING_CSD;SAFE_BROWSING_DB_LOCAL;SAFE_BROWSING_SERVICE;USE_LIBPCI=1;USE_OPENSSL=1;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(OutDir)obj\global_intermediate;..\third_party\wtl\include;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP /we4389 /bigobj /d2Zi+ /Zc:inline /Oy- /Gw %(AdditionalOptions)</AdditionalOptions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4091;4127;4351;4355;4503;4589;4611;4100;4121;4244;4481;4505;4510;4512;4610;4838;4996;4456;4457;4458;4459;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <ForcedIncludeFiles>precompile.h</ForcedIncludeFiles>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <MinimalRebuild>false</MinimalRebuild>
+      <OmitFramePointers>false</OmitFramePointers>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precompile.h</PrecompiledHeaderFile>
+      <PreprocessorDefinitions>V8_DEPRECATION_WARNINGS;_WIN32_WINNT=0x0603;WINVER=0x0603;WIN32;_WINDOWS;NOMINMAX;PSAPI_VERSION=1;_CRT_RAND_S;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;WIN32_LEAN_AND_MEAN;_ATL_NO_OPENGL;_SECURE_ATL;_HAS_EXCEPTIONS=0;_WINSOCK_DEPRECATED_NO_WARNINGS;CHROMIUM_BUILD;CR_CLANG_REVISION=242415-1;USE_AURA=1;USE_ASH=1;USE_DEFAULT_RENDER_THEME=1;USE_LIBJPEG_TURBO=1;ENABLE_ONE_CLICK_SIGNIN;ENABLE_PRE_SYNC_BACKUP;ENABLE_REMOTING=1;ENABLE_WEBRTC=1;ENABLE_MEDIA_ROUTER=1;ENABLE_PEPPER_CDMS;ENABLE_CONFIGURATION_POLICY;ENABLE_NOTIFICATIONS;ENABLE_HIDPI=1;ENABLE_TOPCHROME_MD=1;DONT_EMBED_BUILD_METADATA;NO_TCMALLOC;ALLOCATOR_SHIM;__STD_C;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;NTDDI_VERSION=0x06030000;_USING_V110_SDK71_;ENABLE_TASK_MANAGER=1;ENABLE_EXTENSIONS=1;ENABLE_PLUGIN_INSTALLATION=1;ENABLE_PLUGINS=1;ENABLE_SESSION_SERVICE=1;ENABLE_THEMES=1;ENABLE_AUTOFILL_DIALOG=1;ENABLE_BACKGROUND=1;ENABLE_GOOGLE_NOW=1;CLD_VERSION=2;ENABLE_PRINTING=1;ENABLE_BASIC_PRINTING=1;ENABLE_PRINT_PREVIEW=1;ENABLE_SPELLCHECK=1;ENABLE_CAPTIVE_PORTAL_DETECTION=1;ENABLE_APP_LIST=1;ENABLE_SETTINGS_APP=1;ENABLE_SUPERVISED_USERS=1;ENABLE_MDNS=1;ENABLE_SERVICE_DISCOVERY=1;ENABLE_WIFI_BOOTSTRAPPING=1;V8_USE_EXTERNAL_STARTUP_DATA;FULL_SAFE_BROWSING;SAFE_BROWSING_CSD;SAFE_BROWSING_DB_LOCAL;SAFE_BROWSING_SERVICE;USE_LIBPCI=1;USE_OPENSSL=1;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/Windows Kits/8.1/Lib/win8/um/x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/ignore:4221 %(AdditionalOptions)</AdditionalOptions>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>wininet.lib;dnsapi.lib;version.lib;msimg32.lib;ws2_32.lib;usp10.lib;psapi.lib;dbghelp.lib;winmm.lib;shlwapi.lib;kernel32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;user32.lib;uuid.lib;odbc32.lib;odbccp32.lib;delayimp.lib;credui.lib;netapi32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:/Program Files (x86)/Windows Kits/8.1/Lib/win8/um/x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/maxilksize:0x7ff00000 /dynamicbase /ignore:4199 /ignore:4221 /nxcompat %(AdditionalOptions)</AdditionalOptions>
+      <DelayLoadDLLs>dbghelp.dll;dwmapi.dll;shell32.dll;uxtheme.dll;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <FixedBaseAddress>false</FixedBaseAddress>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>olepro32.lib</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>$(OutDir)lib\$(TargetName).lib</ImportLibrary>
+      <MapFileName>$(OutDir)$(TargetName).map</MapFileName>
+      <MinimumRequiredVersion>5.02</MinimumRequiredVersion>
+      <OptimizeReferences>true</OptimizeReferences>
+      <Profile>true</Profile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DllDataFileName>%(Filename).dlldata.c</DllDataFileName>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <OutputDirectory>$(IntDir)</OutputDirectory>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+    </Midl>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..;$(OutDir)obj/global_intermediate;$(OutDir)obj\global_intermediate;..\third_party\wtl\include;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>V8_DEPRECATION_WARNINGS;_WIN32_WINNT=0x0603;WINVER=0x0603;WIN32;_WINDOWS;NOMINMAX;PSAPI_VERSION=1;_CRT_RAND_S;CERT_CHAIN_PARA_HAS_EXTRA_FIELDS;WIN32_LEAN_AND_MEAN;_ATL_NO_OPENGL;_SECURE_ATL;_HAS_EXCEPTIONS=0;_WINSOCK_DEPRECATED_NO_WARNINGS;CHROMIUM_BUILD;CR_CLANG_REVISION=242415-1;USE_AURA=1;USE_ASH=1;USE_DEFAULT_RENDER_THEME=1;USE_LIBJPEG_TURBO=1;ENABLE_ONE_CLICK_SIGNIN;ENABLE_PRE_SYNC_BACKUP;ENABLE_REMOTING=1;ENABLE_WEBRTC=1;ENABLE_MEDIA_ROUTER=1;ENABLE_PEPPER_CDMS;ENABLE_CONFIGURATION_POLICY;ENABLE_NOTIFICATIONS;ENABLE_HIDPI=1;ENABLE_TOPCHROME_MD=1;DONT_EMBED_BUILD_METADATA;NO_TCMALLOC;ALLOCATOR_SHIM;__STD_C;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_DEPRECATE;NTDDI_VERSION=0x06030000;_USING_V110_SDK71_;ENABLE_TASK_MANAGER=1;ENABLE_EXTENSIONS=1;ENABLE_PLUGIN_INSTALLATION=1;ENABLE_PLUGINS=1;ENABLE_SESSION_SERVICE=1;ENABLE_THEMES=1;ENABLE_AUTOFILL_DIALOG=1;ENABLE_BACKGROUND=1;ENABLE_GOOGLE_NOW=1;CLD_VERSION=2;ENABLE_PRINTING=1;ENABLE_BASIC_PRINTING=1;ENABLE_PRINT_PREVIEW=1;ENABLE_SPELLCHECK=1;ENABLE_CAPTIVE_PORTAL_DETECTION=1;ENABLE_APP_LIST=1;ENABLE_SETTINGS_APP=1;ENABLE_SUPERVISED_USERS=1;ENABLE_MDNS=1;ENABLE_SERVICE_DISCOVERY=1;ENABLE_WIFI_BOOTSTRAPPING=1;V8_USE_EXTERNAL_STARTUP_DATA;FULL_SAFE_BROWSING;SAFE_BROWSING_CSD;SAFE_BROWSING_DB_LOCAL;SAFE_BROWSING_SERVICE;USE_LIBPCI=1;USE_OPENSSL=1;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;NDEBUG;NVALGRIND;DYNAMIC_ANNOTATIONS_ENABLED=0;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="net.gyp" />
+    <None Include="base\net_resources.grd">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="base\dir_header.html">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\PRESUBMIT.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\buildbot\buildbot_run.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\dir_exists.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\__init__.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\clique.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\constants.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\exception.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\extern\BogoFP.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\extern\FP.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\extern\__init__.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\extern\tclib.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\__init__.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\android_xml.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\c_format.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\chrome_messages_json.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\data_pack.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\html_inline.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\js_map_format.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\PRESUBMIT.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\__init__.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\policy_template_generator.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\template_formatter.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\writer_configuration.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\writers\__init__.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\writers\adm_writer.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\writers\adml_writer.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\writers\admx_writer.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\writers\android_policy_writer.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\writers\doc_writer.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\writers\ios_plist_writer.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\writers\json_writer.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\writers\mock_writer.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\writers\plist_helper.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\writers\plist_strings_writer.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\writers\plist_writer.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\writers\reg_writer.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\writers\template_writer.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\writers\writer_unittest_common.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\policy_templates\writers\xml_formatted_writer.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\rc.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\rc_header.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\repack.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\format\resource_map.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\gather\__init__.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\gather\admin_template.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\gather\chrome_html.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\gather\chrome_scaled_image.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\gather\igoogle_strings.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\gather\interface.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\gather\json_loader.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\gather\muppet_strings.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\gather\policy_json.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\gather\rc.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\gather\regexp.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\gather\skeleton_gatherer.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\gather\tr_html.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\gather\txt.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\grd_reader.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\grit_runner.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\lazy_re.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\node\__init__.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\node\base.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\node\custom\__init__.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\node\custom\filename.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\node\empty.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\node\include.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\node\io.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\node\mapping.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\node\message.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\node\misc.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\node\structure.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\node\variant.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\pseudo.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\pseudo_rtl.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\scons.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\shortcuts.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\shortcuts_unittests.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tclib.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\test_suite_all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tool\__init__.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tool\android2grd.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tool\build.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tool\buildinfo.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tool\count.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tool\diff_structures.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tool\interface.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tool\menu_from_parts.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tool\newgrd.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tool\postprocess_interface.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tool\preprocess_interface.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tool\rc2grd.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tool\resize.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tool\test.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tool\toolbar_postprocess.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tool\toolbar_preprocess.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tool\transl2tc.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tool\unit.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\tool\xmb.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\util.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit\xtb_reader.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\grit_info.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\gyp_main.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\gyptest.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\MSVSNew.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\MSVSProject.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\MSVSSettings.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\MSVSSettings_test.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\MSVSToolFile.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\MSVSUserFile.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\MSVSUtil.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\MSVSVersion.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\__init__.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\common.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\common_test.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\easy_xml.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\easy_xml_test.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\flock_tool.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\generator\__init__.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\generator\analyzer.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\generator\cmake.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\generator\dump_dependency_json.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\generator\eclipse.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\generator\gypd.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\generator\gypsh.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\generator\make.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\generator\msvs.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\generator\msvs_test.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\generator\ninja.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\generator\ninja_test.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\generator\xcode.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\generator\xcode_test.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\input.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\input_test.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\mac_tool.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\msvs_emulation.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\ninja_syntax.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\ordered_dict.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\simple_copy.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\win_tool.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\xcode_emulation.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\xcode_ninja.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\xcodeproj_file.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\pylib\gyp\xml_fix.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\setup.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions-bare\gyptest-bare.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions-bare\src\bare.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions-depfile\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions-multiple-outputs-with-dependencies\gyptest-action.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions-multiple-outputs-with-dependencies\src\rcopy.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions-multiple-outputs\gyptest-multiple-outputs.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions-multiple-outputs\src\touch.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions-multiple\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions-multiple\src\copy.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions-multiple\src\filter.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions-none\gyptest-none.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions-none\src\fake_cross.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions-subdir\gyptest-action.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions-subdir\src\make-file.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions-subdir\src\subdir\make-subdir-file.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions\generated-header\action.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions\gyptest-default.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions\gyptest-errors.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions\gyptest-generated-header.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions\src\confirm-dep-files.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions\src\subdir1\counter.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions\src\subdir1\make-prog1.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions\src\subdir1\make-prog2.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions\src\subdir2\make-file.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\actions\src\subdir3\generate_main.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\additional-targets\gyptest-additional.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\additional-targets\src\dir1\emit.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\analyzer\gyptest-analyzer.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\arflags\gyptest-arflags.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\assembly\gyptest-assembly.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\assembly\gyptest-override.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\build-option\gyptest-build.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\builddir\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\builddir\gyptest-default.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\cflags\gyptest-cflags.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\compilable\gyptest-headers.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\compiler-override\gyptest-compiler-env-toolchain.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\compiler-override\gyptest-compiler-env.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\compiler-override\gyptest-compiler-global-settings.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\compiler-override\my_cc.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\compiler-override\my_cxx.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\compiler-override\my_ld.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\compiler-override\my_nm.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\compiler-override\my_readelf.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\conditions\elseif\gyptest_elseif.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\configurations\basics\gyptest-configurations.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\configurations\inheritance\gyptest-duplicates.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\configurations\inheritance\gyptest-inheritance.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\configurations\invalid\gyptest-configurations.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\configurations\target_platform\gyptest-target_platform.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\configurations\x64\gyptest-x86.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\copies\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\copies\gyptest-attribs.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\copies\gyptest-default.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\copies\gyptest-samedir.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\copies\gyptest-slash.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\copies\gyptest-updir.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\custom-generator\gyptest-custom-generator.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\custom-generator\mygenerator.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\cxxflags\gyptest-cxxflags.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\defines-escaping\gyptest-defines-escaping.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\defines\gyptest-define-override.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\defines\gyptest-defines-env-regyp.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\defines\gyptest-defines-env.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\defines\gyptest-defines.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\dependencies\adso\write_args.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\dependencies\gyptest-all-dependent-settings-order.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\dependencies\gyptest-double-dependency.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\dependencies\gyptest-extra-targets.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\dependencies\gyptest-lib-only.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\dependencies\gyptest-none-traversal.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\dependencies\gyptest-sharedlib-linksettings.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\dependency-copy\gyptest-copy.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\empty-target\gyptest-empty-target.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\errors\gyptest-errors.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\escaping\gyptest-colon.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\exclusion\gyptest-exclusion.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\external-cross-compile\gyptest-cross.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\external-cross-compile\src\fake_cross.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\external-cross-compile\src\tochar.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\generator-output\actions\subdir1\make-prog1.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\generator-output\actions\subdir1\make-prog2.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\generator-output\actions\subdir2\make-file.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\generator-output\gyptest-actions.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\generator-output\gyptest-copies.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\generator-output\gyptest-depth.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\generator-output\gyptest-mac-bundle.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\generator-output\gyptest-relocate.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\generator-output\gyptest-rules.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\generator-output\gyptest-subdir2-deep.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\generator-output\gyptest-symlink.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\generator-output\gyptest-top-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\generator-output\rules\copy-file.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\gyp-defines\echo.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\gyp-defines\gyptest-multiple-values.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\gyp-defines\gyptest-regyp.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\hard_dependency\gyptest-exported-hard-dependency.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\hard_dependency\gyptest-no-exported-hard-dependency.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\hard_dependency\src\emit.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\hello\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\hello\gyptest-default.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\hello\gyptest-disable-regyp.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\hello\gyptest-regyp-output.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\hello\gyptest-regyp.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\hello\gyptest-target.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\home_dot_gyp\gyptest-home-includes-config-arg.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\home_dot_gyp\gyptest-home-includes-config-env.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\home_dot_gyp\gyptest-home-includes-regyp.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\home_dot_gyp\gyptest-home-includes.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\include_dirs\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\include_dirs\gyptest-default.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\intermediate_dir\gyptest-intermediate-dir.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\intermediate_dir\src\script.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ios\app-bundle\TestApp\check_no_signature.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ios\gyptest-app-ios-assets-catalog.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ios\gyptest-app-ios.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ios\gyptest-archs.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ios\gyptest-crosscompile.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ios\gyptest-deployment-target.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ios\gyptest-extension.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ios\gyptest-per-config-settings.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ios\gyptest-watch.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ios\gyptest-xcode-ninja.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\lib\TestCmd.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\lib\TestCommon.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\lib\TestGyp.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\lib\TestMac.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\lib\TestWin.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\library\gyptest-shared-obj-install-path.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\library\gyptest-shared.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\library\gyptest-static.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\library_dirs\gyptest-library-dirs.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\link-dependency\gyptest-link-dependency.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\link-objects\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\linux\gyptest-implicit-rpath.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\linux\gyptest-ldflags-duplicates.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\linux\ldflags-duplicates\check-ldflags.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-action-envvars.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-app-assets-catalog.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-app-error.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-app.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-archs.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-bundle-resources.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-cflags.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-clang-cxx-language-standard.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-clang-cxx-library.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-copies.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-copy-dylib.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-debuginfo.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-depend-on-bundle.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-deployment-target.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-framework-dirs.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-framework-headers.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-framework.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-global-settings.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-identical-name.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-infoplist-process.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-installname.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-ldflags-passed-to-libtool.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-ldflags.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-libraries.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-libtool-zero.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-loadable-module-bundle-product-extension.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-loadable-module.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-lto.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-missing-cfbundlesignature.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-non-strs-flattened-to-env.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-objc-arc.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-objc-gc.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-postbuild-copy-bundle.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-postbuild-defaults.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-postbuild-fail.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-postbuild-multiple-configurations.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-postbuild-static-library.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-postbuild.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-prefixheader.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-rebuild.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-rpath.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-sdkroot.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-sourceless-module.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-strip-default.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-strip.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-swift-library.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-type-envvars.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-unicode-settings.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-xcode-env-order.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-xcode-gcc-clang.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-xcode-gcc.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-xcode-support-actions.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\mac\gyptest-xctest.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\make\gyptest-dependencies.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\make\gyptest-noload.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\make_global_settings\ar\gyptest-make_global_settings_ar.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\make_global_settings\basics\gyptest-make_global_settings.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\make_global_settings\env-wrapper\gyptest-wrapper.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\make_global_settings\full-toolchain\gyptest-make_global_settings.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\make_global_settings\full-toolchain\my_nm.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\make_global_settings\full-toolchain\my_readelf.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\make_global_settings\ld\gyptest-make_global_settings_ld.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\make_global_settings\wrapper\gyptest-wrapper.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\many-actions\gyptest-many-actions-unsorted.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\many-actions\gyptest-many-actions.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\module\gyptest-default.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\buildevents\gyptest-msbuild-supports-prepostbuild.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\buildevents\gyptest-ninja-warnings.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\config_attrs\gyptest-config_attrs.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\express\gyptest-express.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\external_builder\external_builder.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\external_builder\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\external_builder\msbuild_action.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\external_builder\msbuild_rule.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\filters\gyptest-filters-2008.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\filters\gyptest-filters-2010.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\list_excluded\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\missing_sources\gyptest-missing.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\multiple_actions_error_handling\action_fail.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\multiple_actions_error_handling\action_succeed.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\multiple_actions_error_handling\gyptest.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\props\gyptest-props.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\rules_stdout_stderr\gyptest-rules-stdout-stderr.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\rules_stdout_stderr\rule_stderr.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\rules_stdout_stderr\rule_stdout.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\shared_output\gyptest-shared_output.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\msvs\uldi2010\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\multiple-targets\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\multiple-targets\gyptest-default.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ninja\action-rule-hash\gyptest-action-rule-hash.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ninja\action-rule-hash\subdir\emit.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ninja\action_dependencies\gyptest-action-dependencies.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ninja\action_dependencies\src\emit.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ninja\chained-dependency\gyptest-chained-dependency.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ninja\empty-and-non-empty-duplicate-name\gyptest-empty-and-non-empty-duplicate-name.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ninja\normalize-paths-win\gyptest-normalize-paths.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ninja\s-needs-no-depfiles\gyptest-s-needs-no-depfiles.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ninja\solibs_avoid_relinking\gyptest-solibs-avoid-relinking.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ninja\use-console\gyptest-use-console.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\ninja\use-custom-environment-files\gyptest-use-custom-environment-files.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\no-cpp\gyptest-no-cpp.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\no-output\gyptest-no-output.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\product\gyptest-product.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\prune_targets\gyptest-prune-targets.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\relative\gyptest-default.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\rename\gyptest-filecase.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\restat\gyptest-restat.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\restat\src\create_intermediate.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\restat\src\touch.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\rules-dirname\gyptest-dirname.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\rules-dirname\src\copy-file.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\rules-dirname\src\subdir\printvars.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\rules-rebuild\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\rules-rebuild\gyptest-default.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\rules-rebuild\src\make-sources.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\rules-use-built-dependencies\gyptest-use-built-dependencies.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\rules-variables\gyptest-rules-variables.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\rules\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\rules\gyptest-default.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\rules\gyptest-input-root.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\rules\gyptest-special-variables.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\rules\src\copy-file.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\rules\src\rule.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\same-gyp-name\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\same-gyp-name\gyptest-default.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\same-gyp-name\gyptest-library.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\same-rule-output-file-name\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\same-rule-output-file-name\src\touch.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\same-source-file-name\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\same-source-file-name\gyptest-default.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\same-source-file-name\gyptest-pass-executable.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\same-source-file-name\gyptest-pass-shared.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\same-source-file-name\gyptest-static.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\same-target-name-different-directory\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\same-target-name-different-directory\src\touch.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\same-target-name\gyptest-same-target-name.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\sanitize-rule-names\gyptest-sanitize-rule-names.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\sanitize-rule-names\script.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\self-dependency\gyptest-self-dependency.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\sibling\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\sibling\gyptest-relocate.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\small\gyptest-small.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\standalone-static-library\gyptest-standalone-static-library.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\standalone\gyptest-standalone.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\subdirectory\gyptest-SYMROOT-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\subdirectory\gyptest-SYMROOT-default.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\subdirectory\gyptest-subdir-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\subdirectory\gyptest-subdir-default.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\subdirectory\gyptest-subdir2-deep.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\subdirectory\gyptest-top-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\subdirectory\gyptest-top-default.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\target\gyptest-target.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\toolsets\gyptest-toolsets.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\toplevel-dir\gyptest-toplevel-dir.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\variables\commands\gyptest-commands-ignore-env.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\variables\commands\gyptest-commands-repeated-multidir.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\variables\commands\gyptest-commands-repeated.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\variables\commands\gyptest-commands.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\variables\commands\repeated_multidir\print_cwd_basename.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\variables\commands\test.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\variables\filelist\gyptest-filelist-golden.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\variables\filelist\gyptest-filelist.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\variables\filelist\src\dummy.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\variables\latelate\gyptest-latelate.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\variables\variable-in-path\gyptest-variable-in-path.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\generator-output-different-drive\gyptest-generator-output-different-drive.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-asm-files.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-additional-include-dirs.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-additional-options.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-analysis.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-buffer-security-check.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-calling-convention.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-character-set.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-debug-format.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-default-char-is-unsigned.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-disable-specific-warnings.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-enable-enhanced-instruction-set.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-exception-handling.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-floating-point-model.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-force-include-files.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-function-level-linking.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-optimizations.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-pdbname-override.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-pdbname.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-rtti.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-runtime-checks.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-runtime-library.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-treat-wchar-t-as-built-in-type.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-warning-as-error.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-cl-warning-level.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-command-quote.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-lib-ltcg.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-additional-deps.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-additional-options.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-aslr.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-base-address.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-debug-info.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-default-libs.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-deffile.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-defrelink.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-delay-load-dlls.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-embed-manifest.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-enable-uac.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-enable-winrt-app-revision.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-enable-winrt.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-entrypointsymbol.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-fixed-base.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-force-symbol-reference.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-generate-manifest.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-incremental.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-large-address-aware.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-large-pdb.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-library-adjust.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-library-directories.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-ltcg.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-mapfile.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-nodefaultlib.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-noimportlib.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-nxcompat.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-opt-icf.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-opt-ref.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-ordering.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-outputfile.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-pdb-no-output.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-pdb-output.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-pdb.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-pgo.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-profile.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-restat-importlib.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-safeseh.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-shard.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-subsystem.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-target-machine.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-tsaware.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-uldi.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-unsupported-manifest.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-update-manifest.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-link-warnings-as-errors.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-long-command-line.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-macro-projectname.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-macro-targetext.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-macro-targetfilename.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-macro-targetname.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-macro-targetpath.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-macro-vcinstalldir.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-macros-containing-gyp.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-macros-in-inputs-and-outputs.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-midl-excluded.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-midl-includedirs.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-midl-rules.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-ml-safeseh.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-quoting-commands.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-rc-build.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\gyptest-system-include.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\idl-excluded\copy-file.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\idl-rules\idl_compiler.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\linker-flags\update_pgd.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\precompiled\gyptest-all.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\vs-macros\as.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\vs-macros\do_stuff.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\vs-macros\test_exists.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\test\win\win-tool\gyptest-win-tool-handles-readonly-files.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\tools\graphviz.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\tools\pretty_gyp.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\tools\pretty_sln.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\tools\pretty_vcproj.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+    <None Include="..\tools\gyp\win_is_xtree_patched.py">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\build\precompile.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\tools\gritsettings\resource_ids">
+      <FileType>Document</FileType>
+      <Command>call call python "..\tools\grit\grit.py" "-i" "base\net_resources.grd" "build" "-f" "..\tools\gritsettings\resource_ids" "-o" "$(OutDir)obj\global_intermediate\net" "--write-only-new=0" "-D" "_chromium" "-E" "CHROMIUM_BUILD=chromium" "-D" "toolkit_views" "-D" "use_aura" "-D" "use_ash" "-D" "remoting" "-D" "enable_extensions" "-D" "enable_plugins" "-D" "enable_printing" "-D" "enable_print_preview" "-D" "enable_themes" "-D" "enable_app_list" "-D" "enable_settings_app" "-D" "enable_google_now" "-D" "use_concatenated_impulse_responses" "-D" "enable_media_router" "-D" "enable_webrtc" "-D" "enable_task_manager" "-D" "enable_notifications" "-D" "enable_wifi_bootstrapping" "-D" "enable_service_discovery"
+if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Generating resources from base/net_resources.grd</Message>
+      <Outputs>$(OutDir)obj\global_intermediate\net\grit\net_resources.h;$(OutDir)obj\global_intermediate\net\net_resources.pak;$(OutDir)obj\global_intermediate\net\net_resources.rc</Outputs>
+      <AdditionalInputs>base\net_resources.grd;base\dir_header.html;..\tools\gyp\PRESUBMIT.py;..\tools\gyp\buildbot\buildbot_run.py;..\tools\gyp\dir_exists.py;..\tools\gyp\grit.py;..\tools\gyp\grit\__init__.py;..\tools\gyp\grit\clique.py;..\tools\gyp\grit\constants.py;..\tools\gyp\grit\exception.py;..\tools\gyp\grit\extern\BogoFP.py;..\tools\gyp\grit\extern\FP.py;..\tools\gyp\grit\extern\__init__.py;..\tools\gyp\grit\extern\tclib.py;..\tools\gyp\grit\format\__init__.py;..\tools\gyp\grit\format\android_xml.py;..\tools\gyp\grit\format\c_format.py;..\tools\gyp\grit\format\chrome_messages_json.py;..\tools\gyp\grit\format\data_pack.py;..\tools\gyp\grit\format\html_inline.py;..\tools\gyp\grit\format\js_map_format.py;..\tools\gyp\grit\format\policy_templates\PRESUBMIT.py;..\tools\gyp\grit\format\policy_templates\__init__.py;..\tools\gyp\grit\format\policy_templates\policy_template_generator.py;..\tools\gyp\grit\format\policy_templates\template_formatter.py;..\tools\gyp\grit\format\policy_templates\writer_configuration.py;..\tools\gyp\grit\format\policy_templates\writers\__init__.py;..\tools\gyp\grit\format\policy_templates\writers\adm_writer.py;..\tools\gyp\grit\format\policy_templates\writers\adml_writer.py;..\tools\gyp\grit\format\policy_templates\writers\admx_writer.py;..\tools\gyp\grit\format\policy_templates\writers\android_policy_writer.py;..\tools\gyp\grit\format\policy_templates\writers\doc_writer.py;..\tools\gyp\grit\format\policy_templates\writers\ios_plist_writer.py;..\tools\gyp\grit\format\policy_templates\writers\json_writer.py;..\tools\gyp\grit\format\policy_templates\writers\mock_writer.py;..\tools\gyp\grit\format\policy_templates\writers\plist_helper.py;..\tools\gyp\grit\format\policy_templates\writers\plist_strings_writer.py;..\tools\gyp\grit\format\policy_templates\writers\plist_writer.py;..\tools\gyp\grit\format\policy_templates\writers\reg_writer.py;..\tools\gyp\grit\format\policy_templates\writers\template_writer.py;..\tools\gyp\grit\format\policy_templates\writers\writer_unittest_common.py;..\tools\gyp\grit\format\policy_templates\writers\xml_formatted_writer.py;..\tools\gyp\grit\format\rc.py;..\tools\gyp\grit\format\rc_header.py;..\tools\gyp\grit\format\repack.py;..\tools\gyp\grit\format\resource_map.py;..\tools\gyp\grit\gather\__init__.py;..\tools\gyp\grit\gather\admin_template.py;..\tools\gyp\grit\gather\chrome_html.py;..\tools\gyp\grit\gather\chrome_scaled_image.py;..\tools\gyp\grit\gather\igoogle_strings.py;..\tools\gyp\grit\gather\interface.py;..\tools\gyp\grit\gather\json_loader.py;..\tools\gyp\grit\gather\muppet_strings.py;..\tools\gyp\grit\gather\policy_json.py;..\tools\gyp\grit\gather\rc.py;..\tools\gyp\grit\gather\regexp.py;..\tools\gyp\grit\gather\skeleton_gatherer.py;..\tools\gyp\grit\gather\tr_html.py;..\tools\gyp\grit\gather\txt.py;..\tools\gyp\grit\grd_reader.py;..\tools\gyp\grit\grit_runner.py;..\tools\gyp\grit\lazy_re.py;..\tools\gyp\grit\node\__init__.py;..\tools\gyp\grit\node\base.py;..\tools\gyp\grit\node\custom\__init__.py;..\tools\gyp\grit\node\custom\filename.py;..\tools\gyp\grit\node\empty.py;..\tools\gyp\grit\node\include.py;..\tools\gyp\grit\node\io.py;..\tools\gyp\grit\node\mapping.py;..\tools\gyp\grit\node\message.py;..\tools\gyp\grit\node\misc.py;..\tools\gyp\grit\node\structure.py;..\tools\gyp\grit\node\variant.py;..\tools\gyp\grit\pseudo.py;..\tools\gyp\grit\pseudo_rtl.py;..\tools\gyp\grit\scons.py;..\tools\gyp\grit\shortcuts.py;..\tools\gyp\grit\shortcuts_unittests.py;..\tools\gyp\grit\tclib.py;..\tools\gyp\grit\test_suite_all.py;..\tools\gyp\grit\tool\__init__.py;..\tools\gyp\grit\tool\android2grd.py;..\tools\gyp\grit\tool\build.py;..\tools\gyp\grit\tool\buildinfo.py;..\tools\gyp\grit\tool\count.py;..\tools\gyp\grit\tool\diff_structures.py;..\tools\gyp\grit\tool\interface.py;..\tools\gyp\grit\tool\menu_from_parts.py;..\tools\gyp\grit\tool\newgrd.py;..\tools\gyp\grit\tool\postprocess_interface.py;..\tools\gyp\grit\tool\preprocess_interface.py;..\tools\gyp\grit\tool\rc2grd.py;..\tools\gyp\grit\tool\resize.py;..\tools\gyp\grit\tool\test.py;..\tools\gyp\grit\tool\toolbar_postprocess.py;..\tools\gyp\grit\tool\toolbar_preprocess.py;..\tools\gyp\grit\tool\transl2tc.py;..\tools\gyp\grit\tool\unit.py;..\tools\gyp\grit\tool\xmb.py;..\tools\gyp\grit\util.py;..\tools\gyp\grit\xtb_reader.py;..\tools\gyp\grit_info.py;..\tools\gyp\gyp_main.py;..\tools\gyp\gyptest.py;..\tools\gyp\pylib\gyp\MSVSNew.py;..\tools\gyp\pylib\gyp\MSVSProject.py;..\tools\gyp\pylib\gyp\MSVSSettings.py;..\tools\gyp\pylib\gyp\MSVSSettings_test.py;..\tools\gyp\pylib\gyp\MSVSToolFile.py;..\tools\gyp\pylib\gyp\MSVSUserFile.py;..\tools\gyp\pylib\gyp\MSVSUtil.py;..\tools\gyp\pylib\gyp\MSVSVersion.py;..\tools\gyp\pylib\gyp\__init__.py;..\tools\gyp\pylib\gyp\common.py;..\tools\gyp\pylib\gyp\common_test.py;..\tools\gyp\pylib\gyp\easy_xml.py;..\tools\gyp\pylib\gyp\easy_xml_test.py;..\tools\gyp\pylib\gyp\flock_tool.py;..\tools\gyp\pylib\gyp\generator\__init__.py;..\tools\gyp\pylib\gyp\generator\analyzer.py;..\tools\gyp\pylib\gyp\generator\cmake.py;..\tools\gyp\pylib\gyp\generator\dump_dependency_json.py;..\tools\gyp\pylib\gyp\generator\eclipse.py;..\tools\gyp\pylib\gyp\generator\gypd.py;..\tools\gyp\pylib\gyp\generator\gypsh.py;..\tools\gyp\pylib\gyp\generator\make.py;..\tools\gyp\pylib\gyp\generator\msvs.py;..\tools\gyp\pylib\gyp\generator\msvs_test.py;..\tools\gyp\pylib\gyp\generator\ninja.py;..\tools\gyp\pylib\gyp\generator\ninja_test.py;..\tools\gyp\pylib\gyp\generator\xcode.py;..\tools\gyp\pylib\gyp\generator\xcode_test.py;..\tools\gyp\pylib\gyp\input.py;..\tools\gyp\pylib\gyp\input_test.py;..\tools\gyp\pylib\gyp\mac_tool.py;..\tools\gyp\pylib\gyp\msvs_emulation.py;..\tools\gyp\pylib\gyp\ninja_syntax.py;..\tools\gyp\pylib\gyp\ordered_dict.py;..\tools\gyp\pylib\gyp\simple_copy.py;..\tools\gyp\pylib\gyp\win_tool.py;..\tools\gyp\pylib\gyp\xcode_emulation.py;..\tools\gyp\pylib\gyp\xcode_ninja.py;..\tools\gyp\pylib\gyp\xcodeproj_file.py;..\tools\gyp\pylib\gyp\xml_fix.py;..\tools\gyp\setup.py;..\tools\gyp\test\actions-bare\gyptest-bare.py;..\tools\gyp\test\actions-bare\src\bare.py;..\tools\gyp\test\actions-depfile\gyptest-all.py;..\tools\gyp\test\actions-multiple-outputs-with-dependencies\gyptest-action.py;..\tools\gyp\test\actions-multiple-outputs-with-dependencies\src\rcopy.py;..\tools\gyp\test\actions-multiple-outputs\gyptest-multiple-outputs.py;..\tools\gyp\test\actions-multiple-outputs\src\touch.py;..\tools\gyp\test\actions-multiple\gyptest-all.py;..\tools\gyp\test\actions-multiple\src\copy.py;..\tools\gyp\test\actions-multiple\src\filter.py;..\tools\gyp\test\actions-none\gyptest-none.py;..\tools\gyp\test\actions-none\src\fake_cross.py;..\tools\gyp\test\actions-subdir\gyptest-action.py;..\tools\gyp\test\actions-subdir\src\make-file.py;..\tools\gyp\test\actions-subdir\src\subdir\make-subdir-file.py;..\tools\gyp\test\actions\generated-header\action.py;..\tools\gyp\test\actions\gyptest-all.py;..\tools\gyp\test\actions\gyptest-default.py;..\tools\gyp\test\actions\gyptest-errors.py;..\tools\gyp\test\actions\gyptest-generated-header.py;..\tools\gyp\test\actions\src\confirm-dep-files.py;..\tools\gyp\test\actions\src\subdir1\counter.py;..\tools\gyp\test\actions\src\subdir1\make-prog1.py;..\tools\gyp\test\actions\src\subdir1\make-prog2.py;..\tools\gyp\test\actions\src\subdir2\make-file.py;..\tools\gyp\test\actions\src\subdir3\generate_main.py;..\tools\gyp\test\additional-targets\gyptest-additional.py;..\tools\gyp\test\additional-targets\src\dir1\emit.py;..\tools\gyp\test\analyzer\gyptest-analyzer.py;..\tools\gyp\test\arflags\gyptest-arflags.py;..\tools\gyp\test\assembly\gyptest-assembly.py;..\tools\gyp\test\assembly\gyptest-override.py;..\tools\gyp\test\build-option\gyptest-build.py;..\tools\gyp\test\builddir\gyptest-all.py;..\tools\gyp\test\builddir\gyptest-default.py;..\tools\gyp\test\cflags\gyptest-cflags.py;..\tools\gyp\test\compilable\gyptest-headers.py;..\tools\gyp\test\compiler-override\gyptest-compiler-env-toolchain.py;..\tools\gyp\test\compiler-override\gyptest-compiler-env.py;..\tools\gyp\test\compiler-override\gyptest-compiler-global-settings.py;..\tools\gyp\test\compiler-override\my_cc.py;..\tools\gyp\test\compiler-override\my_cxx.py;..\tools\gyp\test\compiler-override\my_ld.py;..\tools\gyp\test\compiler-override\my_nm.py;..\tools\gyp\test\compiler-override\my_readelf.py;..\tools\gyp\test\conditions\elseif\gyptest_elseif.py;..\tools\gyp\test\configurations\basics\gyptest-configurations.py;..\tools\gyp\test\configurations\inheritance\gyptest-duplicates.py;..\tools\gyp\test\configurations\inheritance\gyptest-inheritance.py;..\tools\gyp\test\configurations\invalid\gyptest-configurations.py;..\tools\gyp\test\configurations\target_platform\gyptest-target_platform.py;..\tools\gyp\test\configurations\x64\gyptest-x86.py;..\tools\gyp\test\copies\gyptest-all.py;..\tools\gyp\test\copies\gyptest-attribs.py;..\tools\gyp\test\copies\gyptest-default.py;..\tools\gyp\test\copies\gyptest-samedir.py;..\tools\gyp\test\copies\gyptest-slash.py;..\tools\gyp\test\copies\gyptest-updir.py;..\tools\gyp\test\custom-generator\gyptest-custom-generator.py;..\tools\gyp\test\custom-generator\mygenerator.py;..\tools\gyp\test\cxxflags\gyptest-cxxflags.py;..\tools\gyp\test\defines-escaping\gyptest-defines-escaping.py;..\tools\gyp\test\defines\gyptest-define-override.py;..\tools\gyp\test\defines\gyptest-defines-env-regyp.py;..\tools\gyp\test\defines\gyptest-defines-env.py;..\tools\gyp\test\defines\gyptest-defines.py;..\tools\gyp\test\dependencies\adso\write_args.py;..\tools\gyp\test\dependencies\gyptest-all-dependent-settings-order.py;..\tools\gyp\test\dependencies\gyptest-double-dependency.py;..\tools\gyp\test\dependencies\gyptest-extra-targets.py;..\tools\gyp\test\dependencies\gyptest-lib-only.py;..\tools\gyp\test\dependencies\gyptest-none-traversal.py;..\tools\gyp\test\dependencies\gyptest-sharedlib-linksettings.py;..\tools\gyp\test\dependency-copy\gyptest-copy.py;..\tools\gyp\test\empty-target\gyptest-empty-target.py;..\tools\gyp\test\errors\gyptest-errors.py;..\tools\gyp\test\escaping\gyptest-colon.py;..\tools\gyp\test\exclusion\gyptest-exclusion.py;..\tools\gyp\test\external-cross-compile\gyptest-cross.py;..\tools\gyp\test\external-cross-compile\src\fake_cross.py;..\tools\gyp\test\external-cross-compile\src\tochar.py;..\tools\gyp\test\generator-output\actions\subdir1\make-prog1.py;..\tools\gyp\test\generator-output\actions\subdir1\make-prog2.py;..\tools\gyp\test\generator-output\actions\subdir2\make-file.py;..\tools\gyp\test\generator-output\gyptest-actions.py;..\tools\gyp\test\generator-output\gyptest-copies.py;..\tools\gyp\test\generator-output\gyptest-depth.py;..\tools\gyp\test\generator-output\gyptest-mac-bundle.py;..\tools\gyp\test\generator-output\gyptest-relocate.py;..\tools\gyp\test\generator-output\gyptest-rules.py;..\tools\gyp\test\generator-output\gyptest-subdir2-deep.py;..\tools\gyp\test\generator-output\gyptest-symlink.py;..\tools\gyp\test\generator-output\gyptest-top-all.py;..\tools\gyp\test\generator-output\rules\copy-file.py;..\tools\gyp\test\gyp-defines\echo.py;..\tools\gyp\test\gyp-defines\gyptest-multiple-values.py;..\tools\gyp\test\gyp-defines\gyptest-regyp.py;..\tools\gyp\test\hard_dependency\gyptest-exported-hard-dependency.py;..\tools\gyp\test\hard_dependency\gyptest-no-exported-hard-dependency.py;..\tools\gyp\test\hard_dependency\src\emit.py;..\tools\gyp\test\hello\gyptest-all.py;..\tools\gyp\test\hello\gyptest-default.py;..\tools\gyp\test\hello\gyptest-disable-regyp.py;..\tools\gyp\test\hello\gyptest-regyp-output.py;..\tools\gyp\test\hello\gyptest-regyp.py;..\tools\gyp\test\hello\gyptest-target.py;..\tools\gyp\test\home_dot_gyp\gyptest-home-includes-config-arg.py;..\tools\gyp\test\home_dot_gyp\gyptest-home-includes-config-env.py;..\tools\gyp\test\home_dot_gyp\gyptest-home-includes-regyp.py;..\tools\gyp\test\home_dot_gyp\gyptest-home-includes.py;..\tools\gyp\test\include_dirs\gyptest-all.py;..\tools\gyp\test\include_dirs\gyptest-default.py;..\tools\gyp\test\intermediate_dir\gyptest-intermediate-dir.py;..\tools\gyp\test\intermediate_dir\src\script.py;..\tools\gyp\test\ios\app-bundle\TestApp\check_no_signature.py;..\tools\gyp\test\ios\gyptest-app-ios-assets-catalog.py;..\tools\gyp\test\ios\gyptest-app-ios.py;..\tools\gyp\test\ios\gyptest-archs.py;..\tools\gyp\test\ios\gyptest-crosscompile.py;..\tools\gyp\test\ios\gyptest-deployment-target.py;..\tools\gyp\test\ios\gyptest-extension.py;..\tools\gyp\test\ios\gyptest-per-config-settings.py;..\tools\gyp\test\ios\gyptest-watch.py;..\tools\gyp\test\ios\gyptest-xcode-ninja.py;..\tools\gyp\test\lib\TestCmd.py;..\tools\gyp\test\lib\TestCommon.py;..\tools\gyp\test\lib\TestGyp.py;..\tools\gyp\test\lib\TestMac.py;..\tools\gyp\test\lib\TestWin.py;..\tools\gyp\test\library\gyptest-shared-obj-install-path.py;..\tools\gyp\test\library\gyptest-shared.py;..\tools\gyp\test\library\gyptest-static.py;..\tools\gyp\test\library_dirs\gyptest-library-dirs.py;..\tools\gyp\test\link-dependency\gyptest-link-dependency.py;..\tools\gyp\test\link-objects\gyptest-all.py;..\tools\gyp\test\linux\gyptest-implicit-rpath.py;..\tools\gyp\test\linux\gyptest-ldflags-duplicates.py;..\tools\gyp\test\linux\ldflags-duplicates\check-ldflags.py;..\tools\gyp\test\mac\gyptest-action-envvars.py;..\tools\gyp\test\mac\gyptest-app-assets-catalog.py;..\tools\gyp\test\mac\gyptest-app-error.py;..\tools\gyp\test\mac\gyptest-app.py;..\tools\gyp\test\mac\gyptest-archs.py;..\tools\gyp\test\mac\gyptest-bundle-resources.py;..\tools\gyp\test\mac\gyptest-cflags.py;..\tools\gyp\test\mac\gyptest-clang-cxx-language-standard.py;..\tools\gyp\test\mac\gyptest-clang-cxx-library.py;..\tools\gyp\test\mac\gyptest-copies.py;..\tools\gyp\test\mac\gyptest-copy-dylib.py;..\tools\gyp\test\mac\gyptest-debuginfo.py;..\tools\gyp\test\mac\gyptest-depend-on-bundle.py;..\tools\gyp\test\mac\gyptest-deployment-target.py;..\tools\gyp\test\mac\gyptest-framework-dirs.py;..\tools\gyp\test\mac\gyptest-framework-headers.py;..\tools\gyp\test\mac\gyptest-framework.py;..\tools\gyp\test\mac\gyptest-global-settings.py;..\tools\gyp\test\mac\gyptest-identical-name.py;..\tools\gyp\test\mac\gyptest-infoplist-process.py;..\tools\gyp\test\mac\gyptest-installname.py;..\tools\gyp\test\mac\gyptest-ldflags-passed-to-libtool.py;..\tools\gyp\test\mac\gyptest-ldflags.py;..\tools\gyp\test\mac\gyptest-libraries.py;..\tools\gyp\test\mac\gyptest-libtool-zero.py;..\tools\gyp\test\mac\gyptest-loadable-module-bundle-product-extension.py;..\tools\gyp\test\mac\gyptest-loadable-module.py;..\tools\gyp\test\mac\gyptest-lto.py;..\tools\gyp\test\mac\gyptest-missing-cfbundlesignature.py;..\tools\gyp\test\mac\gyptest-non-strs-flattened-to-env.py;..\tools\gyp\test\mac\gyptest-objc-arc.py;..\tools\gyp\test\mac\gyptest-objc-gc.py;..\tools\gyp\test\mac\gyptest-postbuild-copy-bundle.py;..\tools\gyp\test\mac\gyptest-postbuild-defaults.py;..\tools\gyp\test\mac\gyptest-postbuild-fail.py;..\tools\gyp\test\mac\gyptest-postbuild-multiple-configurations.py;..\tools\gyp\test\mac\gyptest-postbuild-static-library.py;..\tools\gyp\test\mac\gyptest-postbuild.py;..\tools\gyp\test\mac\gyptest-prefixheader.py;..\tools\gyp\test\mac\gyptest-rebuild.py;..\tools\gyp\test\mac\gyptest-rpath.py;..\tools\gyp\test\mac\gyptest-sdkroot.py;..\tools\gyp\test\mac\gyptest-sourceless-module.py;..\tools\gyp\test\mac\gyptest-strip-default.py;..\tools\gyp\test\mac\gyptest-strip.py;..\tools\gyp\test\mac\gyptest-swift-library.py;..\tools\gyp\test\mac\gyptest-type-envvars.py;..\tools\gyp\test\mac\gyptest-unicode-settings.py;..\tools\gyp\test\mac\gyptest-xcode-env-order.py;..\tools\gyp\test\mac\gyptest-xcode-gcc-clang.py;..\tools\gyp\test\mac\gyptest-xcode-gcc.py;..\tools\gyp\test\mac\gyptest-xcode-support-actions.py;..\tools\gyp\test\mac\gyptest-xctest.py;..\tools\gyp\test\make\gyptest-dependencies.py;..\tools\gyp\test\make\gyptest-noload.py;..\tools\gyp\test\make_global_settings\ar\gyptest-make_global_settings_ar.py;..\tools\gyp\test\make_global_settings\basics\gyptest-make_global_settings.py;..\tools\gyp\test\make_global_settings\env-wrapper\gyptest-wrapper.py;..\tools\gyp\test\make_global_settings\full-toolchain\gyptest-make_global_settings.py;..\tools\gyp\test\make_global_settings\full-toolchain\my_nm.py;..\tools\gyp\test\make_global_settings\full-toolchain\my_readelf.py;..\tools\gyp\test\make_global_settings\ld\gyptest-make_global_settings_ld.py;..\tools\gyp\test\make_global_settings\wrapper\gyptest-wrapper.py;..\tools\gyp\test\many-actions\gyptest-many-actions-unsorted.py;..\tools\gyp\test\many-actions\gyptest-many-actions.py;..\tools\gyp\test\module\gyptest-default.py;..\tools\gyp\test\msvs\buildevents\gyptest-msbuild-supports-prepostbuild.py;..\tools\gyp\test\msvs\buildevents\gyptest-ninja-warnings.py;..\tools\gyp\test\msvs\config_attrs\gyptest-config_attrs.py;..\tools\gyp\test\msvs\express\gyptest-express.py;..\tools\gyp\test\msvs\external_builder\external_builder.py;..\tools\gyp\test\msvs\external_builder\gyptest-all.py;..\tools\gyp\test\msvs\external_builder\msbuild_action.py;..\tools\gyp\test\msvs\external_builder\msbuild_rule.py;..\tools\gyp\test\msvs\filters\gyptest-filters-2008.py;..\tools\gyp\test\msvs\filters\gyptest-filters-2010.py;..\tools\gyp\test\msvs\list_excluded\gyptest-all.py;..\tools\gyp\test\msvs\missing_sources\gyptest-missing.py;..\tools\gyp\test\msvs\multiple_actions_error_handling\action_fail.py;..\tools\gyp\test\msvs\multiple_actions_error_handling\action_succeed.py;..\tools\gyp\test\msvs\multiple_actions_error_handling\gyptest.py;..\tools\gyp\test\msvs\props\gyptest-props.py;..\tools\gyp\test\msvs\rules_stdout_stderr\gyptest-rules-stdout-stderr.py;..\tools\gyp\test\msvs\rules_stdout_stderr\rule_stderr.py;..\tools\gyp\test\msvs\rules_stdout_stderr\rule_stdout.py;..\tools\gyp\test\msvs\shared_output\gyptest-shared_output.py;..\tools\gyp\test\msvs\uldi2010\gyptest-all.py;..\tools\gyp\test\multiple-targets\gyptest-all.py;..\tools\gyp\test\multiple-targets\gyptest-default.py;..\tools\gyp\test\ninja\action-rule-hash\gyptest-action-rule-hash.py;..\tools\gyp\test\ninja\action-rule-hash\subdir\emit.py;..\tools\gyp\test\ninja\action_dependencies\gyptest-action-dependencies.py;..\tools\gyp\test\ninja\action_dependencies\src\emit.py;..\tools\gyp\test\ninja\chained-dependency\gyptest-chained-dependency.py;..\tools\gyp\test\ninja\empty-and-non-empty-duplicate-name\gyptest-empty-and-non-empty-duplicate-name.py;..\tools\gyp\test\ninja\normalize-paths-win\gyptest-normalize-paths.py;..\tools\gyp\test\ninja\s-needs-no-depfiles\gyptest-s-needs-no-depfiles.py;..\tools\gyp\test\ninja\solibs_avoid_relinking\gyptest-solibs-avoid-relinking.py;..\tools\gyp\test\ninja\use-console\gyptest-use-console.py;..\tools\gyp\test\ninja\use-custom-environment-files\gyptest-use-custom-environment-files.py;..\tools\gyp\test\no-cpp\gyptest-no-cpp.py;..\tools\gyp\test\no-output\gyptest-no-output.py;..\tools\gyp\test\product\gyptest-product.py;..\tools\gyp\test\prune_targets\gyptest-prune-targets.py;..\tools\gyp\test\relative\gyptest-default.py;..\tools\gyp\test\rename\gyptest-filecase.py;..\tools\gyp\test\restat\gyptest-restat.py;..\tools\gyp\test\restat\src\create_intermediate.py;..\tools\gyp\test\restat\src\touch.py;..\tools\gyp\test\rules-dirname\gyptest-dirname.py;..\tools\gyp\test\rules-dirname\src\copy-file.py;..\tools\gyp\test\rules-dirname\src\subdir\printvars.py;..\tools\gyp\test\rules-rebuild\gyptest-all.py;..\tools\gyp\test\rules-rebuild\gyptest-default.py;..\tools\gyp\test\rules-rebuild\src\make-sources.py;..\tools\gyp\test\rules-use-built-dependencies\gyptest-use-built-dependencies.py;..\tools\gyp\test\rules-variables\gyptest-rules-variables.py;..\tools\gyp\test\rules\gyptest-all.py;..\tools\gyp\test\rules\gyptest-default.py;..\tools\gyp\test\rules\gyptest-input-root.py;..\tools\gyp\test\rules\gyptest-special-variables.py;..\tools\gyp\test\rules\src\copy-file.py;..\tools\gyp\test\rules\src\rule.py;..\tools\gyp\test\same-gyp-name\gyptest-all.py;..\tools\gyp\test\same-gyp-name\gyptest-default.py;..\tools\gyp\test\same-gyp-name\gyptest-library.py;..\tools\gyp\test\same-rule-output-file-name\gyptest-all.py;..\tools\gyp\test\same-rule-output-file-name\src\touch.py;..\tools\gyp\test\same-source-file-name\gyptest-all.py;..\tools\gyp\test\same-source-file-name\gyptest-default.py;..\tools\gyp\test\same-source-file-name\gyptest-pass-executable.py;..\tools\gyp\test\same-source-file-name\gyptest-pass-shared.py;..\tools\gyp\test\same-source-file-name\gyptest-static.py;..\tools\gyp\test\same-target-name-different-directory\gyptest-all.py;..\tools\gyp\test\same-target-name-different-directory\src\touch.py;..\tools\gyp\test\same-target-name\gyptest-same-target-name.py;..\tools\gyp\test\sanitize-rule-names\gyptest-sanitize-rule-names.py;..\tools\gyp\test\sanitize-rule-names\script.py;..\tools\gyp\test\self-dependency\gyptest-self-dependency.py;..\tools\gyp\test\sibling\gyptest-all.py;..\tools\gyp\test\sibling\gyptest-relocate.py;..\tools\gyp\test\small\gyptest-small.py;..\tools\gyp\test\standalone-static-library\gyptest-standalone-static-library.py;..\tools\gyp\test\standalone\gyptest-standalone.py;..\tools\gyp\test\subdirectory\gyptest-SYMROOT-all.py;..\tools\gyp\test\subdirectory\gyptest-SYMROOT-default.py;..\tools\gyp\test\subdirectory\gyptest-subdir-all.py;..\tools\gyp\test\subdirectory\gyptest-subdir-default.py;..\tools\gyp\test\subdirectory\gyptest-subdir2-deep.py;..\tools\gyp\test\subdirectory\gyptest-top-all.py;..\tools\gyp\test\subdirectory\gyptest-top-default.py;..\tools\gyp\test\target\gyptest-target.py;..\tools\gyp\test\toolsets\gyptest-toolsets.py;..\tools\gyp\test\toplevel-dir\gyptest-toplevel-dir.py;..\tools\gyp\test\variables\commands\gyptest-commands-ignore-env.py;..\tools\gyp\test\variables\commands\gyptest-commands-repeated-multidir.py;..\tools\gyp\test\variables\commands\gyptest-commands-repeated.py;..\tools\gyp\test\variables\commands\gyptest-commands.py;..\tools\gyp\test\variables\commands\repeated_multidir\print_cwd_basename.py;..\tools\gyp\test\variables\commands\test.py;..\tools\gyp\test\variables\filelist\gyptest-filelist-golden.py;..\tools\gyp\test\variables\filelist\gyptest-filelist.py;..\tools\gyp\test\variables\filelist\src\dummy.py;..\tools\gyp\test\variables\latelate\gyptest-latelate.py;..\tools\gyp\test\variables\variable-in-path\gyptest-variable-in-path.py;..\tools\gyp\test\win\generator-output-different-drive\gyptest-generator-output-different-drive.py;..\tools\gyp\test\win\gyptest-asm-files.py;..\tools\gyp\test\win\gyptest-cl-additional-include-dirs.py;..\tools\gyp\test\win\gyptest-cl-additional-options.py;..\tools\gyp\test\win\gyptest-cl-analysis.py;..\tools\gyp\test\win\gyptest-cl-buffer-security-check.py;..\tools\gyp\test\win\gyptest-cl-calling-convention.py;..\tools\gyp\test\win\gyptest-cl-character-set.py;..\tools\gyp\test\win\gyptest-cl-debug-format.py;..\tools\gyp\test\win\gyptest-cl-default-char-is-unsigned.py;..\tools\gyp\test\win\gyptest-cl-disable-specific-warnings.py;..\tools\gyp\test\win\gyptest-cl-enable-enhanced-instruction-set.py;..\tools\gyp\test\win\gyptest-cl-exception-handling.py;..\tools\gyp\test\win\gyptest-cl-floating-point-model.py;..\tools\gyp\test\win\gyptest-cl-force-include-files.py;..\tools\gyp\test\win\gyptest-cl-function-level-linking.py;..\tools\gyp\test\win\gyptest-cl-optimizations.py;..\tools\gyp\test\win\gyptest-cl-pdbname-override.py;..\tools\gyp\test\win\gyptest-cl-pdbname.py;..\tools\gyp\test\win\gyptest-cl-rtti.py;..\tools\gyp\test\win\gyptest-cl-runtime-checks.py;..\tools\gyp\test\win\gyptest-cl-runtime-library.py;..\tools\gyp\test\win\gyptest-cl-treat-wchar-t-as-built-in-type.py;..\tools\gyp\test\win\gyptest-cl-warning-as-error.py;..\tools\gyp\test\win\gyptest-cl-warning-level.py;..\tools\gyp\test\win\gyptest-command-quote.py;..\tools\gyp\test\win\gyptest-lib-ltcg.py;..\tools\gyp\test\win\gyptest-link-additional-deps.py;..\tools\gyp\test\win\gyptest-link-additional-options.py;..\tools\gyp\test\win\gyptest-link-aslr.py;..\tools\gyp\test\win\gyptest-link-base-address.py;..\tools\gyp\test\win\gyptest-link-debug-info.py;..\tools\gyp\test\win\gyptest-link-default-libs.py;..\tools\gyp\test\win\gyptest-link-deffile.py;..\tools\gyp\test\win\gyptest-link-defrelink.py;..\tools\gyp\test\win\gyptest-link-delay-load-dlls.py;..\tools\gyp\test\win\gyptest-link-embed-manifest.py;..\tools\gyp\test\win\gyptest-link-enable-uac.py;..\tools\gyp\test\win\gyptest-link-enable-winrt-app-revision.py;..\tools\gyp\test\win\gyptest-link-enable-winrt.py;..\tools\gyp\test\win\gyptest-link-entrypointsymbol.py;..\tools\gyp\test\win\gyptest-link-fixed-base.py;..\tools\gyp\test\win\gyptest-link-force-symbol-reference.py;..\tools\gyp\test\win\gyptest-link-generate-manifest.py;..\tools\gyp\test\win\gyptest-link-incremental.py;..\tools\gyp\test\win\gyptest-link-large-address-aware.py;..\tools\gyp\test\win\gyptest-link-large-pdb.py;..\tools\gyp\test\win\gyptest-link-library-adjust.py;..\tools\gyp\test\win\gyptest-link-library-directories.py;..\tools\gyp\test\win\gyptest-link-ltcg.py;..\tools\gyp\test\win\gyptest-link-mapfile.py;..\tools\gyp\test\win\gyptest-link-nodefaultlib.py;..\tools\gyp\test\win\gyptest-link-noimportlib.py;..\tools\gyp\test\win\gyptest-link-nxcompat.py;..\tools\gyp\test\win\gyptest-link-opt-icf.py;..\tools\gyp\test\win\gyptest-link-opt-ref.py;..\tools\gyp\test\win\gyptest-link-ordering.py;..\tools\gyp\test\win\gyptest-link-outputfile.py;..\tools\gyp\test\win\gyptest-link-pdb-no-output.py;..\tools\gyp\test\win\gyptest-link-pdb-output.py;..\tools\gyp\test\win\gyptest-link-pdb.py;..\tools\gyp\test\win\gyptest-link-pgo.py;..\tools\gyp\test\win\gyptest-link-profile.py;..\tools\gyp\test\win\gyptest-link-restat-importlib.py;..\tools\gyp\test\win\gyptest-link-safeseh.py;..\tools\gyp\test\win\gyptest-link-shard.py;..\tools\gyp\test\win\gyptest-link-subsystem.py;..\tools\gyp\test\win\gyptest-link-target-machine.py;..\tools\gyp\test\win\gyptest-link-tsaware.py;..\tools\gyp\test\win\gyptest-link-uldi.py;..\tools\gyp\test\win\gyptest-link-unsupported-manifest.py;..\tools\gyp\test\win\gyptest-link-update-manifest.py;..\tools\gyp\test\win\gyptest-link-warnings-as-errors.py;..\tools\gyp\test\win\gyptest-long-command-line.py;..\tools\gyp\test\win\gyptest-macro-projectname.py;..\tools\gyp\test\win\gyptest-macro-targetext.py;..\tools\gyp\test\win\gyptest-macro-targetfilename.py;..\tools\gyp\test\win\gyptest-macro-targetname.py;..\tools\gyp\test\win\gyptest-macro-targetpath.py;..\tools\gyp\test\win\gyptest-macro-vcinstalldir.py;..\tools\gyp\test\win\gyptest-macros-containing-gyp.py;..\tools\gyp\test\win\gyptest-macros-in-inputs-and-outputs.py;..\tools\gyp\test\win\gyptest-midl-excluded.py;..\tools\gyp\test\win\gyptest-midl-includedirs.py;..\tools\gyp\test\win\gyptest-midl-rules.py;..\tools\gyp\test\win\gyptest-ml-safeseh.py;..\tools\gyp\test\win\gyptest-quoting-commands.py;..\tools\gyp\test\win\gyptest-rc-build.py;..\tools\gyp\test\win\gyptest-system-include.py;..\tools\gyp\test\win\idl-excluded\copy-file.py;..\tools\gyp\test\win\idl-rules\idl_compiler.py;..\tools\gyp\test\win\linker-flags\update_pgd.py;..\tools\gyp\test\win\precompiled\gyptest-all.py;..\tools\gyp\test\win\vs-macros\as.py;..\tools\gyp\test\win\vs-macros\do_stuff.py;..\tools\gyp\test\win\vs-macros\test_exists.py;..\tools\gyp\test\win\win-tool\gyptest-win-tool-handles-readonly-files.py;..\tools\gyp\tools\graphviz.py;..\tools\gyp\tools\pretty_gyp.py;..\tools\gyp\tools\pretty_sln.py;..\tools\gyp\tools\pretty_vcproj.py;..\tools\gyp\win_is_xtree_patched.py</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

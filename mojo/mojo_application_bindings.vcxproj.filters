@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj">
+      <UniqueIdentifier>{7BD4F48B-77B4-AB58-9E24-A7302D190D1C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate">
+      <UniqueIdentifier>{14CEDE64-16A7-96A9-EF19-5C5D6085FF18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo">
+      <UniqueIdentifier>{3D6E26A0-0DAC-FBCB-0BDC-39D658C4EAAF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application">
+      <UniqueIdentifier>{36BDA734-A600-5C03-2292-3DD4E84976F4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public">
+      <UniqueIdentifier>{0D2511BD-044F-C35F-ECCE-845899961E41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces">
+      <UniqueIdentifier>{79633E57-1F7E-1D91-6D35-3CB9EC57E5A4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\application.mojom.cc">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </ClCompile>
+    <ClInclude Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\application.mojom.h">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\application.mojom-internal.h">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </ClInclude>
+    <None Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\application.mojom.js">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\application_mojom.py">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </None>
+    <ClCompile Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\content_handler.mojom.cc">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </ClCompile>
+    <ClInclude Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\content_handler.mojom.h">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\content_handler.mojom-internal.h">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </ClInclude>
+    <None Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\content_handler.mojom.js">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\content_handler_mojom.py">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </None>
+    <ClCompile Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\service_provider.mojom.cc">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </ClCompile>
+    <ClInclude Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\service_provider.mojom.h">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\service_provider.mojom-internal.h">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </ClInclude>
+    <None Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\service_provider.mojom.js">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\service_provider_mojom.py">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </None>
+    <ClCompile Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\shell.mojom.cc">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </ClCompile>
+    <ClInclude Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\shell.mojom.h">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\shell.mojom-internal.h">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </ClInclude>
+    <None Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\shell.mojom.js">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </None>
+    <None Include="$(OutDir)obj\global_intermediate\mojo\application\public\interfaces\shell_mojom.py">
+      <Filter>$(OutDir)obj\global_intermediate\mojo\application\public\interfaces</Filter>
+    </None>
+    <None Include="mojo_base.gyp"/>
+  </ItemGroup>
+</Project>

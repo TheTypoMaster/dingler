@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <PropertyPageSchema Include="$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml"/>
+    <AvailableItemName Include="dafsa">
+      <Targets>_dafsa</Targets>
+    </AvailableItemName>
+  </ItemGroup>
+  <UsingTask AssemblyName="Microsoft.Build.Tasks.v4.0" TaskFactory="XamlTaskFactory" TaskName="dafsa">
+    <Task>$(MSBuildThisFileDirectory)$(MSBuildThisFileName).xml</Task>
+  </UsingTask>
+  <Target AfterTargets="$(dafsaAfterTargets)" BeforeTargets="$(dafsaBeforeTargets)" Condition="'@(dafsa)' != ''" DependsOnTargets="$(dafsaDependsOn);ComputedafsaOutput" Inputs="%(dafsa.Identity);%(dafsa.AdditionalDependencies);$(MSBuildProjectFile)" Name="_dafsa" Outputs="%(dafsa.Outputs)">
+    <ItemGroup Condition="'@(SelectedFiles)' != ''">
+      <dafsa Condition="'%(Identity)' != '@(SelectedFiles)'" Remove="@(dafsa)"/>
+    </ItemGroup>
+    <ItemGroup>
+      <dafsa_inputs Include="%(dafsa.AdditionalDependencies)"/>
+    </ItemGroup>
+    <ItemGroup>
+      <dafsa_tlog Condition="'%(dafsa.Outputs)' != '' and '%(dafsa.ExcludedFromBuild)' != 'true'" Include="%(dafsa.Outputs)">
+        <Source>@(dafsa, &apos;|&apos;)</Source>
+        <Inputs>@(dafsa_inputs -&gt; &apos;%(Fullpath)&apos;, &apos;;&apos;)</Inputs>
+      </dafsa_tlog>
+    </ItemGroup>
+    <Message Importance="High" Text="%(dafsa.ExecutionDescription)"/>
+    <WriteLinesToFile Condition="'@(dafsa_tlog)' != '' and '%(dafsa_tlog.ExcludedFromBuild)' != 'true'" File="$(IntDir)$(ProjectName).write.1.tlog" Lines="^%(dafsa_tlog.Source);@(dafsa_tlog-&gt;'%(Fullpath)')"/>
+    <WriteLinesToFile Condition="'@(dafsa_tlog)' != '' and '%(dafsa_tlog.ExcludedFromBuild)' != 'true'" File="$(IntDir)$(ProjectName).read.1.tlog" Lines="^%(dafsa_tlog.Source);%(dafsa_tlog.Inputs)"/>
+    <dafsa AdditionalOptions="%(dafsa.AdditionalOptions)" CommandLineTemplate="%(dafsa.CommandLineTemplate)" Condition="'@(dafsa)' != '' and '%(dafsa.ExcludedFromBuild)' != 'true'" EchoOff="true" Inputs="%(dafsa.Identity)" StandardErrorImportance="High" StandardOutputImportance="High"/>
+  </Target>
+  <PropertyGroup>
+    <ComputeLinkInputsTargets>$(ComputeLinkInputsTargets);ComputedafsaOutput;</ComputeLinkInputsTargets>
+    <ComputeLibInputsTargets>$(ComputeLibInputsTargets);ComputedafsaOutput;</ComputeLibInputsTargets>
+  </PropertyGroup>
+  <Target Condition="'@(dafsa)' != ''" Name="ComputedafsaOutput">
+    <ItemGroup>
+      <dafsaDirsToMake Condition="'@(dafsa)' != '' and '%(dafsa.ExcludedFromBuild)' != 'true'" Include="%(dafsa.Outputs)"/>
+      <Link Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" Include="%(dafsaDirsToMake.Identity)"/>
+      <Lib Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" Include="%(dafsaDirsToMake.Identity)"/>
+      <ImpLib Condition="'%(Extension)'=='.obj' or '%(Extension)'=='.res' or '%(Extension)'=='.rsc' or '%(Extension)'=='.lib'" Include="%(dafsaDirsToMake.Identity)"/>
+    </ItemGroup>
+    <MakeDir Directories="@(dafsaDirsToMake-&gt;'%(RootDir)%(Directory)')"/>
+  </Target>
+</Project>

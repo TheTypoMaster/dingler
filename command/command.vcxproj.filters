@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="script_host.h" />
+    <ClInclude Include="key.h" />
+    <ClInclude Include="command_executor.h" />
+    <ClInclude Include="color.h" />
+    <ClInclude Include="constants.h" />
+    <ClInclude Include="tools\query\query_tool.h">
+      <Filter>tools\query</Filter>
+    </ClInclude>
+    <ClInclude Include="tool_command.h" />
+    <ClInclude Include="size.h" />
+    <ClInclude Include="status.h" />
+    <ClInclude Include="tools\help\help_tool.h">
+      <Filter>tools\help</Filter>
+    </ClInclude>
+    <ClInclude Include="thread_safe_sender.h" />
+    <ClInclude Include="screen_buffer.h" />
+    <ClInclude Include="command_tool.h" />
+    <ClInclude Include="screen.h" />
+    <ClInclude Include="cursor.h" />
+    <ClInclude Include="command_ast.h" />
+    <ClInclude Include="command_history.h" />
+    <ClInclude Include="command_parser.h" />
+    <ClInclude Include="session.h" />
+    <ClInclude Include="connection.h" />
+    <ClInclude Include="screen_driver.h" />
+    <ClInclude Include="command_main.h" />
+    <ClInclude Include="command_thread.h" />
+    <ClInclude Include="console.h" />
+    <ClInclude Include="tools\container\container_tool.h">
+      <Filter>tools\container</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\image\catalog_cmd.h">
+      <Filter>tools\image</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\image\clone_cmd.h">
+      <Filter>tools\image</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\image\create_cmd.h">
+      <Filter>tools\image</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\image\delete_cmd.h">
+      <Filter>tools\image</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\image\get_cmd.h">
+      <Filter>tools\image</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\image\image_tool.h">
+      <Filter>tools\image</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\image\info_cmd.h">
+      <Filter>tools\image</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\image\load_cmd.h">
+      <Filter>tools\image</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\image\put_cmd.h">
+      <Filter>tools\image</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\image\unload_cmd.h">
+      <Filter>tools\image</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\process\list_cmd.h">
+      <Filter>tools\process</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\process\process_tool.h">
+      <Filter>tools\process</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\console\console_tool.h">
+      <Filter>tools\console</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\container\list_container_cmd.h">
+      <Filter>tools\container</Filter>
+    </ClInclude>
+    <ClInclude Include="tools\image\list_image_cmd.h">
+      <Filter>tools\image</Filter>
+    </ClInclude>
+    <ClInclude Include="command_token.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="script_host.cc" />
+    <ClCompile Include="command_executor.cc" />
+    <ClCompile Include="tools\query\query_tool.cc">
+      <Filter>tools\query</Filter>
+    </ClCompile>
+    <ClCompile Include="tool_command.cc" />
+    <ClCompile Include="constants.cc" />
+    <ClCompile Include="tools\help\help_tool.cc">
+      <Filter>tools\help</Filter>
+    </ClCompile>
+    <ClCompile Include="thread_safe_sender.cc" />
+    <ClCompile Include="command_history.cc" />
+    <ClCompile Include="command_parser.cc" />
+    <ClCompile Include="session.cc" />
+    <ClCompile Include="connection.cc" />
+    <ClCompile Include="screen.cc" />
+    <ClCompile Include="screen_driver_win.cc" />
+    <ClCompile Include="command_main.cc" />
+    <ClCompile Include="command_thread.cc" />
+    <ClCompile Include="console.cc" />
+    <ClCompile Include="tools\container\container_tool.cc">
+      <Filter>tools\container</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\image\catalog_cmd.cc">
+      <Filter>tools\image</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\image\clone_cmd.cc">
+      <Filter>tools\image</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\image\create_cmd.cc">
+      <Filter>tools\image</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\image\delete_cmd.cc">
+      <Filter>tools\image</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\image\get_cmd.cc">
+      <Filter>tools\image</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\image\image_tool.cc">
+      <Filter>tools\image</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\image\info_cmd.cc">
+      <Filter>tools\image</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\image\load_cmd.cc">
+      <Filter>tools\image</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\image\put_cmd.cc">
+      <Filter>tools\image</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\image\unload_cmd.cc">
+      <Filter>tools\image</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\process\list_cmd.cc">
+      <Filter>tools\process</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\process\process_tool.cc">
+      <Filter>tools\process</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\console\console_tool.cc">
+      <Filter>tools\console</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\container\list_container_cmd.cc">
+      <Filter>tools\container</Filter>
+    </ClCompile>
+    <ClCompile Include="tools\image\list_image_cmd.cc">
+      <Filter>tools\image</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="tools">
+      <UniqueIdentifier>{4cb539c0-5844-4a87-971a-f3608a93728c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools\query">
+      <UniqueIdentifier>{f344b47b-bac1-4064-b35a-8a98c9b4fe74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools\help">
+      <UniqueIdentifier>{91f75eb5-0212-4a24-ad67-763104904325}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools\console">
+      <UniqueIdentifier>{2dea106b-814b-4f45-9273-99cb7a388401}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools\container">
+      <UniqueIdentifier>{b2749219-677a-43b8-abe0-bd18cd4d9eca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools\image">
+      <UniqueIdentifier>{cbc581e4-d6dd-4d21-8b3e-75767e6dd17a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools\process">
+      <UniqueIdentifier>{e55ff532-e00f-4ef7-968d-70d2e3c862f3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

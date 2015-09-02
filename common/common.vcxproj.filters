@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="main_params.h" />
+    <ClInclude Include="client.h" />
+    <ClInclude Include="common_message_generator.h" />
+    <ClInclude Include="container_info.h" />
+    <ClInclude Include="process_type.h" />
+    <ClInclude Include="application_messages.h" />
+    <ClInclude Include="switches.h" />
+    <ClInclude Include="status.h" />
+    <ClInclude Include="constants.h" />
+    <ClInclude Include="paths.h" />
+    <ClInclude Include="result_code.h" />
+    <ClInclude Include="child_message_filter.h" />
+    <ClInclude Include="child_process.h" />
+    <ClInclude Include="child_process_host.h" />
+    <ClInclude Include="child_process_host_delegate.h" />
+    <ClInclude Include="child_process_messages.h" />
+    <ClInclude Include="thread_safe_sender.h" />
+    <ClInclude Include="child_thread.h" />
+    <ClInclude Include="child_thread_impl.h" />
+    <ClInclude Include="mojo\channel_init.h">
+      <Filter>mojo</Filter>
+    </ClInclude>
+    <ClInclude Include="mojo\mojo_application.h">
+      <Filter>mojo</Filter>
+    </ClInclude>
+    <ClInclude Include="mojo\mojo_messages.h">
+      <Filter>mojo</Filter>
+    </ClInclude>
+    <ClInclude Include="mojo\service_registry_impl.h">
+      <Filter>mojo</Filter>
+    </ClInclude>
+    <ClInclude Include="service_registry.h" />
+    <ClInclude Include="common_param_traits.h" />
+    <ClInclude Include="common_param_traits_macros.h" />
+    <ClInclude Include="message_router.h" />
+    <ClInclude Include="file_descriptor_info.h" />
+    <ClInclude Include="file_descriptor_info_impl.h" />
+    <ClInclude Include="process_launcher_delegate.h" />
+    <ClInclude Include="process_info.h" />
+    <ClInclude Include="pref_names.h" />
+    <ClInclude Include="command_messages.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="client.cc" />
+    <ClCompile Include="common_message_generator.cc" />
+    <ClCompile Include="process_type.cc" />
+    <ClCompile Include="switches.cc" />
+    <ClCompile Include="constants.cc" />
+    <ClCompile Include="paths.cc" />
+    <ClCompile Include="paths_win.cc" />
+    <ClCompile Include="child_message_filter.cc" />
+    <ClCompile Include="child_process.cc" />
+    <ClCompile Include="child_process_host.cc" />
+    <ClCompile Include="child_process_host_delegate.cc" />
+    <ClCompile Include="thread_safe_sender.cc" />
+    <ClCompile Include="child_thread_impl.cc" />
+    <ClCompile Include="mojo\channel_init.cc">
+      <Filter>mojo</Filter>
+    </ClCompile>
+    <ClCompile Include="mojo\mojo_application.cc">
+      <Filter>mojo</Filter>
+    </ClCompile>
+    <ClCompile Include="mojo\service_registry_impl.cc">
+      <Filter>mojo</Filter>
+    </ClCompile>
+    <ClCompile Include="common_param_traits.cc" />
+    <ClCompile Include="message_router.cc" />
+    <ClCompile Include="file_descriptor_info_impl.cc" />
+    <ClCompile Include="pref_names.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="mojo">
+      <UniqueIdentifier>{119afd3d-8138-4ae6-b61c-43f0a17d41f3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

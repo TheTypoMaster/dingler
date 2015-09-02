@@ -1,0 +1,578 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="host\container.cc" />
+    <ClCompile Include="host\container_main.cc" />
+    <ClCompile Include="host\container_process.cc" />
+    <ClCompile Include="host\container_thread.cc" />
+    <ClCompile Include="host\volume\volume.cc">
+      <Filter>volume</Filter>
+    </ClCompile>
+    <ClCompile Include="host\volume\volume_backend.cc">
+      <Filter>volume</Filter>
+    </ClCompile>
+    <ClCompile Include="host\volume\volume_dataset.cc">
+      <Filter>volume</Filter>
+    </ClCompile>
+    <ClCompile Include="host\volume\volume_mount.cc">
+      <Filter>volume</Filter>
+    </ClCompile>
+    <ClCompile Include="host\volume\volume_mount_table.cc">
+      <Filter>volume</Filter>
+    </ClCompile>
+    <ClCompile Include="host\volume\volume_pool.cc">
+      <Filter>volume</Filter>
+    </ClCompile>
+    <ClCompile Include="host\volume\volume_drive.cc">
+      <Filter>volume</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\namespace.cc">
+      <Filter>namespace</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\namespace_index.cc">
+      <Filter>namespace</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\namespace_index_db.cc">
+      <Filter>namespace</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\namespace_view.cc">
+      <Filter>namespace</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\resource.cc">
+      <Filter>namespace</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\blob\blob.cc">
+      <Filter>namespace\blob</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\blob\blob_namespace.cc">
+      <Filter>namespace\blob</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\credential\auth_token.cc">
+      <Filter>namespace\credential</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\credential\credential_namespace.cc">
+      <Filter>namespace\credential</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\credential\keystore.cc">
+      <Filter>namespace\credential</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\credential\userid.cc">
+      <Filter>namespace\credential</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\device\camera.cc">
+      <Filter>namespace\device</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\device\device_namespace.cc">
+      <Filter>namespace\device</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\run\run_namespace.cc">
+      <Filter>namespace\run</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\run\runnable.cc">
+      <Filter>namespace\run</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\index\index_namespace.cc">
+      <Filter>namespace\index</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\bt_socket.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\console.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\http_server_socket.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\http_socket.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\https_server_socket.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\https_socket.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\io_namespace.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\io_signal.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\ipc_server_socket.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\ipc_socket.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\dingler_peer.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\dingler_socket.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\rpc_server_socket.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\rpc_socket.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\server_socket.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\socket.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\stderr.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\stdin.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\stdout.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\tcp_server_socket.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\tcp_socket.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\tor_socket.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\udp_server_socket.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\udp_socket.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\io\runnable_socket.cc">
+      <Filter>namespace\io</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\kv\kv_namespace.cc">
+      <Filter>namespace\kv</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\kv\kv_node.cc">
+      <Filter>namespace\kv</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\plugin\plugin_namespace.cc">
+      <Filter>namespace\plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\process\process.cc">
+      <Filter>namespace\process</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\process\process_namespace.cc">
+      <Filter>namespace\process</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\process\resource_pool.cc">
+      <Filter>namespace\process</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\root\root_namespace.cc">
+      <Filter>namespace\root</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\root\root_node.cc">
+      <Filter>namespace\root</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\wallet\wallet.cc">
+      <Filter>namespace\wallet</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\wallet\wallet_namespace.cc">
+      <Filter>namespace\wallet</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\uuid\uuid_namespace.cc">
+      <Filter>namespace\uuid</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\sys\sys_capabilities.cc">
+      <Filter>namespace\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\sys\sys_cpu.cc">
+      <Filter>namespace\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\sys\sys_host.cc">
+      <Filter>namespace\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\sys\sys_memory.cc">
+      <Filter>namespace\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\sys\sys_namespace.cc">
+      <Filter>namespace\sys</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\stats\stats_namespace.cc">
+      <Filter>namespace\stats</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\social\social_contact.cc">
+      <Filter>namespace\social</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\social\social_namespace.cc">
+      <Filter>namespace\social</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\social\social_net.cc">
+      <Filter>namespace\social</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\service\service.cc">
+      <Filter>namespace\service</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\service\service_api.cc">
+      <Filter>namespace\service</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\service\service_channel.cc">
+      <Filter>namespace\service</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\service\service_contract.cc">
+      <Filter>namespace\service</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\service\service_namespace.cc">
+      <Filter>namespace\service</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\service\service_network.cc">
+      <Filter>namespace\service</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\service\service_peer.cc">
+      <Filter>namespace\service</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\service\service_permission.cc">
+      <Filter>namespace\service</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\service\rpc\rpc_service.cc">
+      <Filter>namespace\service\rpc</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\service\rpc\rpc_service_api.cc">
+      <Filter>namespace\service\rpc</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\service\rpc\rpc_service_channel.cc">
+      <Filter>namespace\service\rpc</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\container\container_namespace.cc">
+      <Filter>namespace\container</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\container\container_resource.cc">
+      <Filter>namespace\container</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\container\container_pool_resource.cc">
+      <Filter>namespace\container</Filter>
+    </ClCompile>
+    <ClCompile Include="host\namespace\container\volume_resource.cc">
+      <Filter>namespace\container</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="host\container.h" />
+    <ClInclude Include="host\container_main.h" />
+    <ClInclude Include="host\container_process.h" />
+    <ClInclude Include="host\container_thread.h" />
+    <ClInclude Include="host\volume\volume.h">
+      <Filter>volume</Filter>
+    </ClInclude>
+    <ClInclude Include="host\volume\volume_backend.h">
+      <Filter>volume</Filter>
+    </ClInclude>
+    <ClInclude Include="host\volume\volume_dataset.h">
+      <Filter>volume</Filter>
+    </ClInclude>
+    <ClInclude Include="host\volume\volume_mount.h">
+      <Filter>volume</Filter>
+    </ClInclude>
+    <ClInclude Include="host\volume\volume_mount_table.h">
+      <Filter>volume</Filter>
+    </ClInclude>
+    <ClInclude Include="host\volume\volume_pool.h">
+      <Filter>volume</Filter>
+    </ClInclude>
+    <ClInclude Include="host\volume\volume_drive.h">
+      <Filter>volume</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\namespace.h">
+      <Filter>namespace</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\namespace_index.h">
+      <Filter>namespace</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\namespace_index_db.h">
+      <Filter>namespace</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\namespace_inode.h">
+      <Filter>namespace</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\namespace_view.h">
+      <Filter>namespace</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\resource.h">
+      <Filter>namespace</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\blob\blob.h">
+      <Filter>namespace\blob</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\blob\blob_namespace.h">
+      <Filter>namespace\blob</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\credential\auth_token.h">
+      <Filter>namespace\credential</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\credential\credential_namespace.h">
+      <Filter>namespace\credential</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\credential\keystore.h">
+      <Filter>namespace\credential</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\credential\userid.h">
+      <Filter>namespace\credential</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\device\camera.h">
+      <Filter>namespace\device</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\device\device_namespace.h">
+      <Filter>namespace\device</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\run\run_namespace.h">
+      <Filter>namespace\run</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\run\runnable.h">
+      <Filter>namespace\run</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\index\index_namespace.h">
+      <Filter>namespace\index</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\bt_socket.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\console.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\http_server_socket.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\http_socket.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\https_server_socket.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\https_socket.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\io_namespace.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\io_signal.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\ipc_server_socket.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\ipc_socket.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\dingler_peer.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\dingler_socket.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\rpc_server_socket.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\rpc_socket.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\server_socket.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\socket.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\stderr.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\stdin.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\stdout.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\tcp_server_socket.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\tcp_socket.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\tor_socket.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\udp_server_socket.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\udp_socket.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\io\runnable_socket.h">
+      <Filter>namespace\io</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\kv\kv_namespace.h">
+      <Filter>namespace\kv</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\kv\kv_node.h">
+      <Filter>namespace\kv</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\plugin\plugin_namespace.h">
+      <Filter>namespace\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\process\process.h">
+      <Filter>namespace\process</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\process\process_namespace.h">
+      <Filter>namespace\process</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\process\resource_pool.h">
+      <Filter>namespace\process</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\root\root_namespace.h">
+      <Filter>namespace\root</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\root\root_node.h">
+      <Filter>namespace\root</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\wallet\wallet.h">
+      <Filter>namespace\wallet</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\wallet\wallet_namespace.h">
+      <Filter>namespace\wallet</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\uuid\uuid_namespace.h">
+      <Filter>namespace\uuid</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\sys\sys_capabilities.h">
+      <Filter>namespace\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\sys\sys_cpu.h">
+      <Filter>namespace\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\sys\sys_host.h">
+      <Filter>namespace\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\sys\sys_memory.h">
+      <Filter>namespace\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\sys\sys_namespace.h">
+      <Filter>namespace\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\stats\stats_namespace.h">
+      <Filter>namespace\stats</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\social\social_contact.h">
+      <Filter>namespace\social</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\social\social_namespace.h">
+      <Filter>namespace\social</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\social\social_net.h">
+      <Filter>namespace\social</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\service\service.h">
+      <Filter>namespace\service</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\service\service_api.h">
+      <Filter>namespace\service</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\service\service_channel.h">
+      <Filter>namespace\service</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\service\service_contract.h">
+      <Filter>namespace\service</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\service\service_namespace.h">
+      <Filter>namespace\service</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\service\service_network.h">
+      <Filter>namespace\service</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\service\service_peer.h">
+      <Filter>namespace\service</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\service\service_permission.h">
+      <Filter>namespace\service</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\service\rpc\rpc_service.h">
+      <Filter>namespace\service\rpc</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\service\rpc\rpc_service_api.h">
+      <Filter>namespace\service\rpc</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\service\rpc\rpc_service_channel.h">
+      <Filter>namespace\service\rpc</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\container\container_namespace.h">
+      <Filter>namespace\container</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\container\container_resource.h">
+      <Filter>namespace\container</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\container\container_pool_resource.h">
+      <Filter>namespace\container</Filter>
+    </ClInclude>
+    <ClInclude Include="host\namespace\container\volume_resource.h">
+      <Filter>namespace\container</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="namespace">
+      <UniqueIdentifier>{088aec6b-548b-469a-804d-15482c044629}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="namespace\blob">
+      <UniqueIdentifier>{7fcdc4ca-2db8-43db-adf3-27be50167453}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="namespace\credential">
+      <UniqueIdentifier>{ca151230-c889-4e54-9fad-dcbc599c71b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="namespace\device">
+      <UniqueIdentifier>{692f5690-8cc4-4abe-a548-4d3c7b0b81a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="namespace\index">
+      <UniqueIdentifier>{f9228760-1814-4381-a278-bf11f78a2dfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="namespace\io">
+      <UniqueIdentifier>{18fa02f3-25db-4345-8a61-a420d2b1a3aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="namespace\kv">
+      <UniqueIdentifier>{180c54e2-2594-434e-8dca-653e89c895d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="namespace\plugin">
+      <UniqueIdentifier>{c4b21bd1-8fe5-489d-bcb1-bdf83a3665dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="namespace\process">
+      <UniqueIdentifier>{69ea98e6-2fc7-48d0-a1a5-e6b34f4f57be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="namespace\root">
+      <UniqueIdentifier>{01ad484a-bdfc-4e4d-952f-9c04920ef100}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="namespace\service">
+      <UniqueIdentifier>{901dabcc-6da9-499b-88e5-7dd74ed3418a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="namespace\service\rpc">
+      <UniqueIdentifier>{3d0d7850-f636-4b9a-b1d4-5b7a23f15a83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="namespace\social">
+      <UniqueIdentifier>{a4424000-aa40-471c-b07a-f04ced82b1b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="namespace\stats">
+      <UniqueIdentifier>{abb34d3d-d334-4e6f-9322-fd39f41f5070}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="namespace\sys">
+      <UniqueIdentifier>{6a92fee8-02d0-4511-843a-e257131ee362}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="namespace\uuid">
+      <UniqueIdentifier>{afe86dda-3761-4b7d-9b6d-8d43ef0a9bee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="namespace\wallet">
+      <UniqueIdentifier>{9d38f3aa-c78f-425d-a05c-7d635d3bfdc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="volume">
+      <UniqueIdentifier>{1d205ed9-17ef-4fbf-a2e1-855f34a0a2b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="namespace\run">
+      <UniqueIdentifier>{12bdc19d-e0fc-442c-ad01-cf8058178989}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="namespace\container">
+      <UniqueIdentifier>{d499a156-dcb6-47aa-98fb-53c733edb45c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,893 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="object.cc" />
+    <ClCompile Include="namespace.cc" />
+    <ClCompile Include="document.cc" />
+    <ClCompile Include="blob.cc" />
+    <ClCompile Include="image_file.cc" />
+    <ClCompile Include="location.cc" />
+    <ClCompile Include="index.cc" />
+    <ClCompile Include="query\base\bit_pointers.cc">
+      <Filter>query\base</Filter>
+    </ClCompile>
+    <ClCompile Include="query\base\block.cc">
+      <Filter>query\base</Filter>
+    </ClCompile>
+    <ClCompile Include="query\base\copy_column.cc">
+      <Filter>query\base</Filter>
+    </ClCompile>
+    <ClCompile Include="query\base\double_buffered_block.cc">
+      <Filter>query\base</Filter>
+    </ClCompile>
+    <ClCompile Include="query\base\projector.cc">
+      <Filter>query\base</Filter>
+    </ClCompile>
+    <ClCompile Include="query\base\tuple_schema.cc">
+      <Filter>query\base</Filter>
+    </ClCompile>
+    <ClCompile Include="query\base\types.cc">
+      <Filter>query\base</Filter>
+    </ClCompile>
+    <ClCompile Include="query\base\types_infrastructure.cc">
+      <Filter>query\base</Filter>
+    </ClCompile>
+    <ClCompile Include="query\base\view_copier.cc">
+      <Filter>query\base</Filter>
+    </ClCompile>
+    <ClCompile Include="query\base\memory\arena.cc">
+      <Filter>query\base\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="query\base\memory\memory.cc">
+      <Filter>query\base\memory</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\aggregate_clusters.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\aggregate_groups.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\aggregate_scalar.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\aggregator.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\basic_cursor.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\basic_operation.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\benchmarks.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\coalesce.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\column_aggregator.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\compute.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\cursor.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\cursors.pb.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\file_io.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\filter.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\foreign_filter.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\generate.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\hash_join.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\hybrid_group_utils.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\iterators.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\limit.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\lookup_index.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\merge_union_all.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\ordering.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\project.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\row_hash_set.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\rowid_merge_join.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\scan_view.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\sort.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\specification_builder.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\splitter.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\spy.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\table.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\view_cursor.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\view_printer.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\cursor\writer.cc">
+      <Filter>query\cursor</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\arithmetic_bound_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\arithmetic_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\basic_bound_expression.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\basic_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\bound_expression_factory.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\cast_bound_expression.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\cast_expression.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\comparison_bound_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\comparison_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\date_bound_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\date_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\elementary_bound_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\elementary_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\expression.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\expression_utils.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\hashing_bound_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\hashing_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\math_bound_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\math_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\operators.pb.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\projecting_bound_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\projecting_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\regexp_bound_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\regexp_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\stateful_bound_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\stateful_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\string_bound_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\string_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\terminal_bound_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\terminal_expressions.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\vector_logic.cc">
+      <Filter>query\expression</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\bits.cc">
+      <Filter>query\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\demangle.cc">
+      <Filter>query\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\file.cc">
+      <Filter>query\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\file_util.cc">
+      <Filter>query\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\hash.cc">
+      <Filter>query\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\int128.cc">
+      <Filter>query\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\mathlimits.cc">
+      <Filter>query\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\random.cc">
+      <Filter>query\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\rune.c">
+      <Filter>query\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\specification.pb.cc">
+      <Filter>query\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\stack_trace.cc">
+      <Filter>query\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\stack_trace.pb.cc">
+      <Filter>query\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\strptime.cc">
+      <Filter>query\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\strtoint.cc">
+      <Filter>query\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\supersonic.pb.cc">
+      <Filter>query\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\walltime.cc">
+      <Filter>query\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\strings\ascii_ctype.cc">
+      <Filter>query\utils\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\strings\case.cc">
+      <Filter>query\utils\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\strings\charset.cc">
+      <Filter>query\utils\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\strings\escaping.cc">
+      <Filter>query\utils\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\strings\human_readable.cc">
+      <Filter>query\utils\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\strings\join.cc">
+      <Filter>query\utils\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\strings\memutil.cc">
+      <Filter>query\utils\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\strings\numbers.cc">
+      <Filter>query\utils\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\strings\serialize.cc">
+      <Filter>query\utils\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\strings\split.cc">
+      <Filter>query\utils\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\strings\strcat.cc">
+      <Filter>query\utils\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\strings\strip.cc">
+      <Filter>query\utils\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\strings\substitute.cc">
+      <Filter>query\utils\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="query\utils\strings\util.cc">
+      <Filter>query\utils\strings</Filter>
+    </ClCompile>
+    <ClCompile Include="query\expression\stateful_expressions_test.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="namespace.h" />
+    <ClInclude Include="object.h" />
+    <ClInclude Include="document.h" />
+    <ClInclude Include="blob.h" />
+    <ClInclude Include="image_file.h" />
+    <ClInclude Include="location.h" />
+    <ClInclude Include="index.h" />
+    <ClInclude Include="query\base\aggregation_operators.h">
+      <Filter>query\base</Filter>
+    </ClInclude>
+    <ClInclude Include="query\base\bit_pointers.h">
+      <Filter>query\base</Filter>
+    </ClInclude>
+    <ClInclude Include="query\base\block.h">
+      <Filter>query\base</Filter>
+    </ClInclude>
+    <ClInclude Include="query\base\copy_column.h">
+      <Filter>query\base</Filter>
+    </ClInclude>
+    <ClInclude Include="query\base\double_buffered_block.h">
+      <Filter>query\base</Filter>
+    </ClInclude>
+    <ClInclude Include="query\base\exception.h">
+      <Filter>query\base</Filter>
+    </ClInclude>
+    <ClInclude Include="query\base\exception_macros.h">
+      <Filter>query\base</Filter>
+    </ClInclude>
+    <ClInclude Include="query\base\operators.h">
+      <Filter>query\base</Filter>
+    </ClInclude>
+    <ClInclude Include="query\base\projector.h">
+      <Filter>query\base</Filter>
+    </ClInclude>
+    <ClInclude Include="query\base\result.h">
+      <Filter>query\base</Filter>
+    </ClInclude>
+    <ClInclude Include="query\base\tuple_schema.h">
+      <Filter>query\base</Filter>
+    </ClInclude>
+    <ClInclude Include="query\base\types.h">
+      <Filter>query\base</Filter>
+    </ClInclude>
+    <ClInclude Include="query\base\types_infrastructure.h">
+      <Filter>query\base</Filter>
+    </ClInclude>
+    <ClInclude Include="query\base\variant.h">
+      <Filter>query\base</Filter>
+    </ClInclude>
+    <ClInclude Include="query\base\variant_pointer.h">
+      <Filter>query\base</Filter>
+    </ClInclude>
+    <ClInclude Include="query\base\view_copier.h">
+      <Filter>query\base</Filter>
+    </ClInclude>
+    <ClInclude Include="query\base\memory\arena.h">
+      <Filter>query\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="query\base\memory\memory.h">
+      <Filter>query\base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\aggregate.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\aggregator.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\basic_cursor.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\basic_operation.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\benchmarks.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\coalesce.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\column_aggregator.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\compute.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\cursor.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\cursor_transformer.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\cursors.pb.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\file_io.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\file_io-internal.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\filter.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\foreign_filter.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\generate.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\hash_join.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\history_transformer.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\hybrid_group_utils.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\iterators.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\limit.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\lookup_index.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\merge_union_all.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\operation.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\ordering.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\ownership_revoker.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\ownership_taker.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\project.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\row.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\row_copier.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\row_hash_set.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\rowid_merge_join.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\scan_view.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\sort.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\specification_builder.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\splitter.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\spy.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\table.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\value_ref.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\view_cursor.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\view_printer.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\cursor\writer.h">
+      <Filter>query\cursor</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\abstract_bound_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\abstract_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\arithmetic_bound_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\arithmetic_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\basic_bound_expression.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\basic_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\binary_column_computers.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\bound_expression_creators.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\bound_expression_factory.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\cast_bound_expression.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\cast_expression.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\column_validity_checkers.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\comparison_bound_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\comparison_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\date_bound_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\date_evaluators.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\date_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\elementary_bound_const_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\elementary_bound_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\elementary_const_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\elementary_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\expression.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\expression_evaluators.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\expression_traits.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\expression_utils.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\hashing_bound_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\hashing_evaluators.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\hashing_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\math_bound_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\math_evaluators.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\math_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\operators.pb.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\projecting_bound_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\projecting_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\regexp_bound_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\regexp_bound_expressions_internal.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\regexp_evaluators.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\regexp_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\simd_operators.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\stateful_bound_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\stateful_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\string_bound_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\string_evaluators.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\string_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\terminal_bound_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\terminal_expressions.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\ternary_column_computers.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\unary_column_computers.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\vector_logic.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\expression\vector_primitives.h">
+      <Filter>query\expression</Filter>
+    </ClInclude>
+    <ClInclude Include="query\lang\lang_ast.h">
+      <Filter>query\lang</Filter>
+    </ClInclude>
+    <ClInclude Include="query\lang\lang_token.h">
+      <Filter>query\lang</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\algorithm.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\arm_instruction_set_select.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\bits.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\casts.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\charmap.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\container_literal.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\container_literal_generated.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\container_logging.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\coowned_pointer.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\cycleclock-inl.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\demangle.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\endian.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\failureor.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\file.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\file_util.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\fixedarray.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\hash.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\int128.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\iterator_adaptors.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\macros.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\manual_constructor.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\map_util.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\mathlimits.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\paranoid.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\pointer_vector.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\port.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\random.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\specification.pb.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\stack_trace.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\stack_trace.pb.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\stl_util.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\strtoint.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\supersonic.pb.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\supersonic-config.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\template_util.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\thread_annotations.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\timer.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\utf.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\utfdef.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\walltime.h">
+      <Filter>query\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\strings\ascii_ctype.h">
+      <Filter>query\utils\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\strings\case.h">
+      <Filter>query\utils\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\strings\charset.h">
+      <Filter>query\utils\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\strings\escaping.h">
+      <Filter>query\utils\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\strings\fastmem.h">
+      <Filter>query\utils\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\strings\human_readable.h">
+      <Filter>query\utils\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\strings\join.h">
+      <Filter>query\utils\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\strings\join_internal.h">
+      <Filter>query\utils\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\strings\memutil.h">
+      <Filter>query\utils\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\strings\numbers.h">
+      <Filter>query\utils\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\strings\serialize.h">
+      <Filter>query\utils\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\strings\split.h">
+      <Filter>query\utils\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\strings\split_internal.h">
+      <Filter>query\utils\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\strings\strcat.h">
+      <Filter>query\utils\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\strings\strip.h">
+      <Filter>query\utils\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\strings\substitute.h">
+      <Filter>query\utils\strings</Filter>
+    </ClInclude>
+    <ClInclude Include="query\utils\strings\util.h">
+      <Filter>query\utils\strings</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="query">
+      <UniqueIdentifier>{98a7cd3c-dffd-4d58-a663-1ba5c0c35060}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="query\base">
+      <UniqueIdentifier>{ec3dd35f-d2a4-46a3-81ab-e805f51cf414}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="query\cursor">
+      <UniqueIdentifier>{05e670fa-d40a-434a-aa87-3777e4fe55d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="query\expression">
+      <UniqueIdentifier>{eafb2beb-1cd4-4e31-b8e0-97de3df7c232}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="query\lang">
+      <UniqueIdentifier>{577ce7c9-8f14-4c81-ac99-a15180572901}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="query\utils">
+      <UniqueIdentifier>{bea56b32-ce7c-4d42-a79d-144406ff07fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="query\base\memory">
+      <UniqueIdentifier>{a4ae3b05-22a2-4d2d-bc06-9202d2ff7a2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="query\utils\strings">
+      <UniqueIdentifier>{69abcd6d-00bb-4fdb-a46d-8cdf108d2c78}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="query\cursor\cursors.proto">
+      <Filter>query\cursor</Filter>
+    </None>
+    <None Include="query\expression\operators.proto">
+      <Filter>query\expression</Filter>
+    </None>
+    <None Include="query\utils\specification.proto">
+      <Filter>query\utils</Filter>
+    </None>
+    <None Include="query\utils\stack_trace.proto">
+      <Filter>query\utils</Filter>
+    </None>
+    <None Include="query\utils\supersonic.proto">
+      <Filter>query\utils</Filter>
+    </None>
+  </ItemGroup>
+</Project>

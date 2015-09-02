@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="status.h" />
+    <ClInclude Include="context.h" />
+    <ClInclude Include="schema.h" />
+    <ClInclude Include="db.h" />
+    <ClInclude Include="row.h" />
+    <ClInclude Include="cursor.h" />
+    <ClInclude Include="table.h" />
+    <ClInclude Include="op.h" />
+    <ClInclude Include="index.h" />
+    <ClInclude Include="globals.h" />
+    <ClInclude Include="mutator.h" />
+    <ClInclude Include="transaction.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="context.cc" />
+    <ClCompile Include="schema.cc" />
+    <ClCompile Include="db.cc" />
+    <ClCompile Include="row.cc" />
+    <ClCompile Include="cursor.cc" />
+    <ClCompile Include="table.cc" />
+    <ClCompile Include="index.cc" />
+    <ClCompile Include="mutator.cc" />
+    <ClCompile Include="transaction.cc" />
+  </ItemGroup>
+</Project>

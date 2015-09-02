@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(dafsaBeforeTargets)' == '' and '$(dafsaAfterTargets)' == '' and '$(ConfigurationType)' != 'Makefile'">
+    <dafsaBeforeTargets>Midl</dafsaBeforeTargets>
+    <dafsaAfterTargets>CustomBuild</dafsaAfterTargets>
+  </PropertyGroup>
+  <PropertyGroup>
+    <dafsaDependsOn Condition="'$(ConfigurationType)' != 'Makefile'">_SelectedFiles;$(dafsaDependsOn)</dafsaDependsOn>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <dafsa>
+      <CommandLineTemplate>set INPUTDIR=%(RelativeDir)&#xA;if NOT DEFINED INPUTDIR set INPUTDIR=.\&#xA;set INPUTDIR=%INPUTDIR:~0,-1%&#xA;call python &quot;tools\tld_cleanup\make_dafsa.py&quot; &quot;%(Identity)&quot; &quot;$(OutDir)obj\global_intermediate\net\%INPUTDIR%\%(Filename)-inc.cc&quot;</CommandLineTemplate>
+      <Outputs>$(OutDir)obj\global_intermediate\net\%(RelativeDir)\%(Filename)-inc.cc</Outputs>
+      <ExecutionDescription>dafsa</ExecutionDescription>
+      <AdditionalDependencies>tools\tld_cleanup\make_dafsa.py</AdditionalDependencies>
+    </dafsa>
+  </ItemDefinitionGroup>
+</Project>

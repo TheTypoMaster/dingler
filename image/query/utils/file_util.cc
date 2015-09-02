@@ -1,0 +1,127 @@
+// Copyright 2012 Google Inc. All Rights Reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+//
+// Author: tomasz.kaftal@gmail.com (Tomasz Kaftal)
+//
+// File management utilities' implementation.
+#include "image/query/utils/file_util.h"
+
+#include <sys/stat.h>
+#include <stdio.h>
+
+#include <vector>
+#include "base/logging.h"
+#include "base/strings/stringprintf.h"
+#include "base/threading/platform_thread.h"
+#include "base/files/file_util.h"
+#include "image/query/utils/walltime.h"
+#include "image/query/utils/timer.h"
+#include "image/query/utils/port.h"
+
+using std::vector;
+
+namespace image {
+
+ static inline File* TryCreate(const char *directory_prefix) {
+  // Attempt to create a temporary file.
+  string filename;
+  if (!TempFile::TempFilename(directory_prefix, &filename))
+   return NULL;
+  File* fp = File::Create(filename, "w+");
+  if (fp && fp->Open()) {
+   DLOG(INFO) << "Created fname: " << fp->CreateFileName();
+   return fp;
+  }
+  return NULL;
+ }
+
+ // Tries to create a tempfile in directory 'directory_prefix' or get a
+ // directory from GetExistingTempDirectories().
+ /* static */
+ File* TempFile::Create(const char *directory_prefix) {
+  // If directory_prefix is not provided an already-existing temp directory
+  // will be used
+  if (!(directory_prefix && *directory_prefix)) {
+   return TryCreate(NULL);
+  }
+
+  //struct stat st;
+  base::FilePath path;
+  path.AppendASCII(directory_prefix);
+  //if (!(stat(directory_prefix, &st) == 0 && S_ISDIR(st.st_mode))) {
+  if (!path.EndsWithSeparator()) { // TODO: this probably doesnt work
+   // Directory_prefix does not point to a directory.
+   LOG(ERROR) << "Not a directory: " << directory_prefix;
+   return NULL;
+  }
+  return TryCreate(directory_prefix);
+ }
+
+ // Creates a temporary file name using standard library utilities.
+ static inline void TempFilenameInDir(const char *directory_prefix,
+  string *filename) {
+  base::PlatformThreadId tid = base::PlatformThread::CurrentId();//pthread_self();
+  //int32 pid = static_cast<int32>(getpid());
+  int32 pid = static_cast<int32>(tid);
+  int64 now = CycleClock::Now();
+  int64 now_usec = GetCurrentTimeMicros();
+  *filename = File::JoinPath(
+   directory_prefix,
+   base::StringPrintf("tempfile-%" GPRIxPTHREAD "-%d-%llx-%llx",
+   PRINTABLE_PTHREAD(tid), pid, now, now_usec));
+ }
+
+ /* static */
+ bool TempFile::TempFilename(const char *directory_prefix, string *filename) {
+  CHECK(filename != NULL);
+  filename->clear();
+
+  if (directory_prefix != NULL) {
+   TempFilenameInDir(directory_prefix, filename);
+   return true;
+  }
+
+  //// Re-fetching available dirs ensures thread safety.
+  //vector<string> dirs;
+  //// TODO(tkaftal): Namespace might vary depending on glog installation options,
+  //// I should probably use a configure/make flag here.
+  //google::GetExistingTempDirectories(&dirs);
+
+  //// Try each directory, as they might be full, have inappropriate
+  //// permissions or have different problems at times.
+  //for (int i = 0; i < dirs.size(); ++i) {
+  // TempFilenameInDir(dirs[i].c_str(), filename);
+  // if (File::Exists(*filename)) {
+  //  LOG(WARNING) << "unique tempfile already exists in " << *filename;
+  //  filename->clear();
+  // }
+  // else {
+  //  return true;
+  // }
+  //}
+
+  //LOG(ERROR) << "Couldn't find a suitable TempFile anywhere. Tried "
+  // << dirs.size() << " directories";
+  return false;
+ }
+
+ /* static */
+ string TempFile::TempFilename(const char *directory_prefix) {
+  string file_name;
+  CHECK(TempFilename(directory_prefix, &file_name))
+   << "Could not create temporary file with prefix: " << directory_prefix;
+  return file_name;
+ }
+
+} // namespace image

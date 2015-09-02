@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 13.00
+# Visual Studio 2013
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "etw_manifest", "etw_manifest.vcxproj", "{B0AC8452-5737-5B95-6DEC-20CD015D1060}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|Win32 = Debug|Win32
+		Release|x64 = Release|x64
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0AC8452-5737-5B95-6DEC-20CD015D1060}.Debug|x64.ActiveCfg = Debug|x64
+		{B0AC8452-5737-5B95-6DEC-20CD015D1060}.Debug|x64.Build.0 = Debug|x64
+		{B0AC8452-5737-5B95-6DEC-20CD015D1060}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B0AC8452-5737-5B95-6DEC-20CD015D1060}.Debug|Win32.Build.0 = Debug|Win32
+		{B0AC8452-5737-5B95-6DEC-20CD015D1060}.Release|x64.ActiveCfg = Release|x64
+		{B0AC8452-5737-5B95-6DEC-20CD015D1060}.Release|x64.Build.0 = Release|x64
+		{B0AC8452-5737-5B95-6DEC-20CD015D1060}.Release|Win32.ActiveCfg = Release|Win32
+		{B0AC8452-5737-5B95-6DEC-20CD015D1060}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

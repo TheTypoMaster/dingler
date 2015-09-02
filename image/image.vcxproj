@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3C822018-7C67-4525-9E84-B084BF15176F}</ProjectGuid>
+    <RootNamespace>image</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\;$(OutDir)obj\global_intermediate;..\third_party\wtl\include;..\third_party\icu\source\i18n;..\third_party\icu\source\common;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\;$(OutDir)obj\global_intermediate;..\third_party\wtl\include;..\third_party\icu\source\i18n;..\third_party\icu\source\common;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\;$(OutDir)obj\global_intermediate;..\third_party\wtl\include;..\third_party\icu\source\i18n;..\third_party\icu\source\common;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;NOMINMAX;_USE_MATH_DEFINES;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4005;4267;4244;4800;4996;4003;4273;4716;4703;4309;4351;4715;4018;4503;4805</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>..\;../third_party/protobuf/src;../third_party/re2;$(OutDir)obj\global_intermediate;..\third_party\wtl\include;..\third_party\icu\source\i18n;..\third_party\icu\source\common;C:\Program Files (x86)\Windows Kits\8.1\Include\shared;C:\Program Files (x86)\Windows Kits\8.1\Include\um;C:\Program Files (x86)\Windows Kits\8.1\Include\winrt;$(VSInstallDir)\VC\atlmfc\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="blob.cc" />
+    <ClCompile Include="document.cc" />
+    <ClCompile Include="index.cc" />
+    <ClCompile Include="location.cc" />
+    <ClCompile Include="namespace.cc" />
+    <ClCompile Include="object.cc" />
+    <ClCompile Include="image_file.cc" />
+    <ClCompile Include="query\base\bit_pointers.cc" />
+    <ClCompile Include="query\base\block.cc" />
+    <ClCompile Include="query\base\copy_column.cc" />
+    <ClCompile Include="query\base\double_buffered_block.cc" />
+    <ClCompile Include="query\base\memory\arena.cc" />
+    <ClCompile Include="query\base\memory\memory.cc" />
+    <ClCompile Include="query\base\projector.cc" />
+    <ClCompile Include="query\base\tuple_schema.cc" />
+    <ClCompile Include="query\base\types.cc" />
+    <ClCompile Include="query\base\types_infrastructure.cc" />
+    <ClCompile Include="query\base\view_copier.cc" />
+    <ClCompile Include="query\cursor\aggregate_clusters.cc" />
+    <ClCompile Include="query\cursor\aggregate_groups.cc" />
+    <ClCompile Include="query\cursor\aggregate_scalar.cc" />
+    <ClCompile Include="query\cursor\aggregator.cc" />
+    <ClCompile Include="query\cursor\basic_cursor.cc" />
+    <ClCompile Include="query\cursor\basic_operation.cc" />
+    <ClCompile Include="query\cursor\benchmarks.cc" />
+    <ClCompile Include="query\cursor\coalesce.cc" />
+    <ClCompile Include="query\cursor\column_aggregator.cc" />
+    <ClCompile Include="query\cursor\compute.cc" />
+    <ClCompile Include="query\cursor\cursor.cc" />
+    <ClCompile Include="query\cursor\cursors.pb.cc" />
+    <ClCompile Include="query\cursor\file_io.cc" />
+    <ClCompile Include="query\cursor\filter.cc" />
+    <ClCompile Include="query\cursor\foreign_filter.cc" />
+    <ClCompile Include="query\cursor\generate.cc" />
+    <ClCompile Include="query\cursor\hash_join.cc" />
+    <ClCompile Include="query\cursor\hybrid_group_utils.cc" />
+    <ClCompile Include="query\cursor\iterators.cc" />
+    <ClCompile Include="query\cursor\limit.cc" />
+    <ClCompile Include="query\cursor\lookup_index.cc" />
+    <ClCompile Include="query\cursor\merge_union_all.cc" />
+    <ClCompile Include="query\cursor\ordering.cc" />
+    <ClCompile Include="query\cursor\project.cc" />
+    <ClCompile Include="query\cursor\rowid_merge_join.cc" />
+    <ClCompile Include="query\cursor\row_hash_set.cc" />
+    <ClCompile Include="query\cursor\scan_view.cc" />
+    <ClCompile Include="query\cursor\sort.cc" />
+    <ClCompile Include="query\cursor\specification_builder.cc" />
+    <ClCompile Include="query\cursor\splitter.cc" />
+    <ClCompile Include="query\cursor\spy.cc" />
+    <ClCompile Include="query\cursor\table.cc" />
+    <ClCompile Include="query\cursor\view_cursor.cc" />
+    <ClCompile Include="query\cursor\view_printer.cc" />
+    <ClCompile Include="query\cursor\writer.cc" />
+    <ClCompile Include="query\expression\arithmetic_bound_expressions.cc" />
+    <ClCompile Include="query\expression\arithmetic_expressions.cc" />
+    <ClCompile Include="query\expression\basic_bound_expression.cc" />
+    <ClCompile Include="query\expression\basic_expressions.cc" />
+    <ClCompile Include="query\expression\bound_expression_factory.cc" />
+    <ClCompile Include="query\expression\cast_bound_expression.cc" />
+    <ClCompile Include="query\expression\cast_expression.cc" />
+    <ClCompile Include="query\expression\comparison_bound_expressions.cc" />
+    <ClCompile Include="query\expression\comparison_expressions.cc" />
+    <ClCompile Include="query\expression\date_bound_expressions.cc" />
+    <ClCompile Include="query\expression\date_expressions.cc" />
+    <ClCompile Include="query\expression\elementary_bound_expressions.cc" />
+    <ClCompile Include="query\expression\elementary_expressions.cc" />
+    <ClCompile Include="query\expression\expression.cc" />
+    <ClCompile Include="query\expression\expression_utils.cc" />
+    <ClCompile Include="query\expression\hashing_bound_expressions.cc" />
+    <ClCompile Include="query\expression\hashing_expressions.cc" />
+    <ClCompile Include="query\expression\math_bound_expressions.cc" />
+    <ClCompile Include="query\expression\math_expressions.cc" />
+    <ClCompile Include="query\expression\operators.pb.cc" />
+    <ClCompile Include="query\expression\projecting_bound_expressions.cc" />
+    <ClCompile Include="query\expression\projecting_expressions.cc" />
+    <ClCompile Include="query\expression\regexp_bound_expressions.cc" />
+    <ClCompile Include="query\expression\regexp_expressions.cc" />
+    <ClCompile Include="query\expression\stateful_bound_expressions.cc" />
+    <ClCompile Include="query\expression\stateful_expressions.cc" />
+    <ClCompile Include="query\expression\stateful_expressions_test.cc" />
+    <ClCompile Include="query\expression\string_bound_expressions.cc" />
+    <ClCompile Include="query\expression\string_expressions.cc" />
+    <ClCompile Include="query\expression\terminal_bound_expressions.cc" />
+    <ClCompile Include="query\expression\terminal_expressions.cc" />
+    <ClCompile Include="query\expression\vector_logic.cc" />
+    <ClCompile Include="query\utils\bits.cc" />
+    <ClCompile Include="query\utils\demangle.cc" />
+    <ClCompile Include="query\utils\file.cc" />
+    <ClCompile Include="query\utils\file_util.cc" />
+    <ClCompile Include="query\utils\hash.cc" />
+    <ClCompile Include="query\utils\int128.cc" />
+    <ClCompile Include="query\utils\mathlimits.cc" />
+    <ClCompile Include="query\utils\random.cc" />
+    <ClCompile Include="query\utils\rune.c" />
+    <ClCompile Include="query\utils\specification.pb.cc" />
+    <ClCompile Include="query\utils\stack_trace.cc" />
+    <ClCompile Include="query\utils\stack_trace.pb.cc" />
+    <ClCompile Include="query\utils\strings\ascii_ctype.cc" />
+    <ClCompile Include="query\utils\strings\case.cc" />
+    <ClCompile Include="query\utils\strings\charset.cc" />
+    <ClCompile Include="query\utils\strings\escaping.cc" />
+    <ClCompile Include="query\utils\strings\human_readable.cc" />
+    <ClCompile Include="query\utils\strings\join.cc" />
+    <ClCompile Include="query\utils\strings\memutil.cc" />
+    <ClCompile Include="query\utils\strings\numbers.cc" />
+    <ClCompile Include="query\utils\strings\serialize.cc" />
+    <ClCompile Include="query\utils\strings\split.cc" />
+    <ClCompile Include="query\utils\strings\strcat.cc" />
+    <ClCompile Include="query\utils\strings\strip.cc" />
+    <ClCompile Include="query\utils\strings\substitute.cc" />
+    <ClCompile Include="query\utils\strings\util.cc" />
+    <ClCompile Include="query\utils\strptime.cc" />
+    <ClCompile Include="query\utils\strtoint.cc" />
+    <ClCompile Include="query\utils\supersonic.pb.cc" />
+    <ClCompile Include="query\utils\walltime.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="blob.h" />
+    <ClInclude Include="document.h" />
+    <ClInclude Include="index.h" />
+    <ClInclude Include="location.h" />
+    <ClInclude Include="namespace.h" />
+    <ClInclude Include="object.h" />
+    <ClInclude Include="image_file.h" />
+    <ClInclude Include="query\base\aggregation_operators.h" />
+    <ClInclude Include="query\base\bit_pointers.h" />
+    <ClInclude Include="query\base\block.h" />
+    <ClInclude Include="query\base\copy_column.h" />
+    <ClInclude Include="query\base\double_buffered_block.h" />
+    <ClInclude Include="query\base\exception.h" />
+    <ClInclude Include="query\base\exception_macros.h" />
+    <ClInclude Include="query\base\memory\arena.h" />
+    <ClInclude Include="query\base\memory\memory.h" />
+    <ClInclude Include="query\base\operators.h" />
+    <ClInclude Include="query\base\projector.h" />
+    <ClInclude Include="query\base\result.h" />
+    <ClInclude Include="query\base\tuple_schema.h" />
+    <ClInclude Include="query\base\types.h" />
+    <ClInclude Include="query\base\types_infrastructure.h" />
+    <ClInclude Include="query\base\variant.h" />
+    <ClInclude Include="query\base\variant_pointer.h" />
+    <ClInclude Include="query\base\view_copier.h" />
+    <ClInclude Include="query\cursor\aggregate.h" />
+    <ClInclude Include="query\cursor\aggregator.h" />
+    <ClInclude Include="query\cursor\basic_cursor.h" />
+    <ClInclude Include="query\cursor\basic_operation.h" />
+    <ClInclude Include="query\cursor\benchmarks.h" />
+    <ClInclude Include="query\cursor\coalesce.h" />
+    <ClInclude Include="query\cursor\column_aggregator.h" />
+    <ClInclude Include="query\cursor\compute.h" />
+    <ClInclude Include="query\cursor\cursor.h" />
+    <ClInclude Include="query\cursor\cursors.pb.h" />
+    <ClInclude Include="query\cursor\cursor_transformer.h" />
+    <ClInclude Include="query\cursor\file_io-internal.h" />
+    <ClInclude Include="query\cursor\file_io.h" />
+    <ClInclude Include="query\cursor\filter.h" />
+    <ClInclude Include="query\cursor\foreign_filter.h" />
+    <ClInclude Include="query\cursor\generate.h" />
+    <ClInclude Include="query\cursor\hash_join.h" />
+    <ClInclude Include="query\cursor\history_transformer.h" />
+    <ClInclude Include="query\cursor\hybrid_group_utils.h" />
+    <ClInclude Include="query\cursor\iterators.h" />
+    <ClInclude Include="query\cursor\limit.h" />
+    <ClInclude Include="query\cursor\lookup_index.h" />
+    <ClInclude Include="query\cursor\merge_union_all.h" />
+    <ClInclude Include="query\cursor\operation.h" />
+    <ClInclude Include="query\cursor\ordering.h" />
+    <ClInclude Include="query\cursor\ownership_revoker.h" />
+    <ClInclude Include="query\cursor\ownership_taker.h" />
+    <ClInclude Include="query\cursor\project.h" />
+    <ClInclude Include="query\cursor\row.h" />
+    <ClInclude Include="query\cursor\rowid_merge_join.h" />
+    <ClInclude Include="query\cursor\row_copier.h" />
+    <ClInclude Include="query\cursor\row_hash_set.h" />
+    <ClInclude Include="query\cursor\scan_view.h" />
+    <ClInclude Include="query\cursor\sort.h" />
+    <ClInclude Include="query\cursor\specification_builder.h" />
+    <ClInclude Include="query\cursor\splitter.h" />
+    <ClInclude Include="query\cursor\spy.h" />
+    <ClInclude Include="query\cursor\table.h" />
+    <ClInclude Include="query\cursor\value_ref.h" />
+    <ClInclude Include="query\cursor\view_cursor.h" />
+    <ClInclude Include="query\cursor\view_printer.h" />
+    <ClInclude Include="query\cursor\writer.h" />
+    <ClInclude Include="query\expression\abstract_bound_expressions.h" />
+    <ClInclude Include="query\expression\abstract_expressions.h" />
+    <ClInclude Include="query\expression\arithmetic_bound_expressions.h" />
+    <ClInclude Include="query\expression\arithmetic_expressions.h" />
+    <ClInclude Include="query\expression\basic_bound_expression.h" />
+    <ClInclude Include="query\expression\basic_expressions.h" />
+    <ClInclude Include="query\expression\binary_column_computers.h" />
+    <ClInclude Include="query\expression\bound_expression_creators.h" />
+    <ClInclude Include="query\expression\bound_expression_factory.h" />
+    <ClInclude Include="query\expression\cast_bound_expression.h" />
+    <ClInclude Include="query\expression\cast_expression.h" />
+    <ClInclude Include="query\expression\column_validity_checkers.h" />
+    <ClInclude Include="query\expression\comparison_bound_expressions.h" />
+    <ClInclude Include="query\expression\comparison_expressions.h" />
+    <ClInclude Include="query\expression\date_bound_expressions.h" />
+    <ClInclude Include="query\expression\date_evaluators.h" />
+    <ClInclude Include="query\expression\date_expressions.h" />
+    <ClInclude Include="query\expression\elementary_bound_const_expressions.h" />
+    <ClInclude Include="query\expression\elementary_bound_expressions.h" />
+    <ClInclude Include="query\expression\elementary_const_expressions.h" />
+    <ClInclude Include="query\expression\elementary_expressions.h" />
+    <ClInclude Include="query\expression\expression.h" />
+    <ClInclude Include="query\expression\expression_evaluators.h" />
+    <ClInclude Include="query\expression\expression_traits.h" />
+    <ClInclude Include="query\expression\expression_utils.h" />
+    <ClInclude Include="query\expression\hashing_bound_expressions.h" />
+    <ClInclude Include="query\expression\hashing_evaluators.h" />
+    <ClInclude Include="query\expression\hashing_expressions.h" />
+    <ClInclude Include="query\expression\math_bound_expressions.h" />
+    <ClInclude Include="query\expression\math_evaluators.h" />
+    <ClInclude Include="query\expression\math_expressions.h" />
+    <ClInclude Include="query\expression\operators.pb.h" />
+    <ClInclude Include="query\expression\projecting_bound_expressions.h" />
+    <ClInclude Include="query\expression\projecting_expressions.h" />
+    <ClInclude Include="query\expression\regexp_bound_expressions.h" />
+    <ClInclude Include="query\expression\regexp_bound_expressions_internal.h" />
+    <ClInclude Include="query\expression\regexp_evaluators.h" />
+    <ClInclude Include="query\expression\regexp_expressions.h" />
+    <ClInclude Include="query\expression\simd_operators.h" />
+    <ClInclude Include="query\expression\stateful_bound_expressions.h" />
+    <ClInclude Include="query\expression\stateful_expressions.h" />
+    <ClInclude Include="query\expression\string_bound_expressions.h" />
+    <ClInclude Include="query\expression\string_evaluators.h" />
+    <ClInclude Include="query\expression\string_expressions.h" />
+    <ClInclude Include="query\expression\terminal_bound_expressions.h" />
+    <ClInclude Include="query\expression\terminal_expressions.h" />
+    <ClInclude Include="query\expression\ternary_column_computers.h" />
+    <ClInclude Include="query\expression\unary_column_computers.h" />
+    <ClInclude Include="query\expression\vector_logic.h" />
+    <ClInclude Include="query\expression\vector_primitives.h" />
+    <ClInclude Include="query\lang\lang_ast.h" />
+    <ClInclude Include="query\lang\lang_token.h" />
+    <ClInclude Include="query\utils\algorithm.h" />
+    <ClInclude Include="query\utils\arm_instruction_set_select.h" />
+    <ClInclude Include="query\utils\bits.h" />
+    <ClInclude Include="query\utils\casts.h" />
+    <ClInclude Include="query\utils\charmap.h" />
+    <ClInclude Include="query\utils\container_literal.h" />
+    <ClInclude Include="query\utils\container_literal_generated.h" />
+    <ClInclude Include="query\utils\container_logging.h" />
+    <ClInclude Include="query\utils\coowned_pointer.h" />
+    <ClInclude Include="query\utils\cycleclock-inl.h" />
+    <ClInclude Include="query\utils\demangle.h" />
+    <ClInclude Include="query\utils\endian.h" />
+    <ClInclude Include="query\utils\failureor.h" />
+    <ClInclude Include="query\utils\file.h" />
+    <ClInclude Include="query\utils\file_util.h" />
+    <ClInclude Include="query\utils\fixedarray.h" />
+    <ClInclude Include="query\utils\hash.h" />
+    <ClInclude Include="query\utils\int128.h" />
+    <ClInclude Include="query\utils\iterator_adaptors.h" />
+    <ClInclude Include="query\utils\macros.h" />
+    <ClInclude Include="query\utils\manual_constructor.h" />
+    <ClInclude Include="query\utils\map_util.h" />
+    <ClInclude Include="query\utils\mathlimits.h" />
+    <ClInclude Include="query\utils\paranoid.h" />
+    <ClInclude Include="query\utils\pointer_vector.h" />
+    <ClInclude Include="query\utils\port.h" />
+    <ClInclude Include="query\utils\random.h" />
+    <ClInclude Include="query\utils\specification.pb.h" />
+    <ClInclude Include="query\utils\stack_trace.h" />
+    <ClInclude Include="query\utils\stack_trace.pb.h" />
+    <ClInclude Include="query\utils\stl_util.h" />
+    <ClInclude Include="query\utils\strings\ascii_ctype.h" />
+    <ClInclude Include="query\utils\strings\case.h" />
+    <ClInclude Include="query\utils\strings\charset.h" />
+    <ClInclude Include="query\utils\strings\escaping.h" />
+    <ClInclude Include="query\utils\strings\fastmem.h" />
+    <ClInclude Include="query\utils\strings\human_readable.h" />
+    <ClInclude Include="query\utils\strings\join.h" />
+    <ClInclude Include="query\utils\strings\join_internal.h" />
+    <ClInclude Include="query\utils\strings\memutil.h" />
+    <ClInclude Include="query\utils\strings\numbers.h" />
+    <ClInclude Include="query\utils\strings\serialize.h" />
+    <ClInclude Include="query\utils\strings\split.h" />
+    <ClInclude Include="query\utils\strings\split_internal.h" />
+    <ClInclude Include="query\utils\strings\strcat.h" />
+    <ClInclude Include="query\utils\strings\strip.h" />
+    <ClInclude Include="query\utils\strings\substitute.h" />
+    <ClInclude Include="query\utils\strings\util.h" />
+    <ClInclude Include="query\utils\strtoint.h" />
+    <ClInclude Include="query\utils\supersonic-config.h" />
+    <ClInclude Include="query\utils\supersonic.pb.h" />
+    <ClInclude Include="query\utils\template_util.h" />
+    <ClInclude Include="query\utils\thread_annotations.h" />
+    <ClInclude Include="query\utils\timer.h" />
+    <ClInclude Include="query\utils\utf.h" />
+    <ClInclude Include="query\utils\utfdef.h" />
+    <ClInclude Include="query\utils\walltime.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="query\cursor\cursors.proto" />
+    <None Include="query\expression\operators.proto" />
+    <None Include="query\utils\specification.proto" />
+    <None Include="query\utils\stack_trace.proto" />
+    <None Include="query\utils\supersonic.proto" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="common\constants.h" />
+    <ClInclude Include="common\container_messages.h" />
+    <ClInclude Include="common\uuid.h" />
+    <ClInclude Include="common\p2p_messages.h" />
+    <ClInclude Include="common\tor_messages.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="common\constants.cc" />
+    <ClCompile Include="common\uuid.cc" />
+  </ItemGroup>
+</Project>
